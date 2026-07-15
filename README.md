@@ -14,6 +14,9 @@
 |------|-----|
 | **프로덕션** | https://dreamfactory-app.vercel.app |
 | Vercel 대시보드 | https://vercel.com/ican-eduspaces-projects/dreamfactory-app |
+| GitHub | https://github.com/silverbruce37-bruce/dreamfactory-app |
+
+`main` 브랜치 push 시 Vercel 자동 배포가 연결됩니다.
 
 ## 로컬 실행
 
