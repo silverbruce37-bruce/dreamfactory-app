@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="드림팩토리 통합 성장 프로그램 — AI 학습력, 글로벌 언어, 창의 프로젝트, 인성, 진로 로드맵을 한 시스템으로."
+    />
+    <title>드림팩토리 · Dream Factory Growth Programs</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">DF</span>
+        <div>
+          <strong>드림팩토리</strong>
+          <small>Dream Factory Growth Programs</small>
+        </div>
+      </div>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#programs">프로그램</a>
+        <a href="#model">성장 모델</a>
+        <a href="#audience">대상별</a>
+        <a href="#kit">꺼내쓰기</a>
+        <a href="#metrics">성과</a>
+      </nav>
+      <div class="top-actions">
+        <button type="button" class="ghost" id="btnExportKit" title="선택한 프로그램 브리프 복사">
+          키트 복사
+        </button>
+        <button type="button" class="primary" id="btnOpenKit">내 키트</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">iCAN · 통합 성장 플랫폼</p>
+          <h1 id="heroTagline">AI 시대, 아이의 배움과 비전을 설계합니다.</h1>
+          <p class="lead" id="heroIntro">
+            드림팩토리는 학생이 더 많이 공부하는 곳을 넘어, 더 깊이 생각하고, 더 정확히 표현하고, 더 바르게
+            성장하도록 돕는 성장 공장입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#programs">10개 프로그램 보기</a>
+            <a class="button" href="#kit">필요할 때 꺼내 쓰기</a>
+          </div>
+          <ul class="slogan-row" id="sloganRow" aria-label="핵심 슬로건"></ul>
+        </div>
+        <aside class="hero-panel" aria-label="시스템 요약">
+          <p class="panel-label">하나의 시스템</p>
+          <h2>진단 → 설계 → 훈련 → 피드백 → 증명</h2>
+          <p>
+            10개 프로그램은 독립 과목이 아닙니다. 리딩·라이팅이 발표로, 북클럽이 리서치로, 리서치가 코딩·창의
+            프로젝트로 이어지고, FutureLab이 진로 로드맵으로 정리합니다.
+          </p>
+          <div class="stat-grid">
+            <div><strong>10</strong><span>성장 프로그램</span></div>
+            <div><strong>5</strong><span>성장 단계</span></div>
+            <div><strong>6</strong><span>성과 축</span></div>
+            <div><strong>4</strong><span>성장 경로 유형</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="model" aria-labelledby="modelTitle">
+        <div class="section-head">
+          <p class="eyebrow">Core Growth Model</p>
+          <h2 id="modelTitle">핵심 성장 모델 5단계</h2>
+          <p>모든 프로그램은 이 흐름으로 연결됩니다.</p>
+        </div>
+        <ol class="model-track" id="modelTrack"></ol>
+      </section>
+
+      <section class="section filters-bar" id="programs" aria-labelledby="programsTitle">
+        <div class="section-head">
+          <p class="eyebrow">Program Catalog</p>
+          <h2 id="programsTitle">10개 프로그램 · 카드형 카탈로그</h2>
+          <p>카드를 눌러 상세를 보고, 키트에 담아 필요할 때 꺼내 쓰세요.</p>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-field">
+            <span class="sr-only">검색</span>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="프로그램, 목표, 결과물 검색…"
+              autocomplete="off"
+            />
+          </label>
+          <div class="chip-row" id="audienceChips" role="group" aria-label="대상 필터"></div>
+          <div class="chip-row" id="pathChips" role="group" aria-label="경로 유형 필터">
+            <button type="button" class="chip active" data-path="all">전체 경로</button>
+            <button type="button" class="chip" data-path="약점 보완형">약점 보완</button>
+            <button type="button" class="chip" data-path="강점 확장형">강점 확장</button>
+            <button type="button" class="chip" data-path="진로 탐색형">진로 탐색</button>
+            <button type="button" class="chip" data-path="프로젝트 완성형">프로젝트 완성</button>
+          </div>
+          <div class="view-meta">
+            <span id="resultCount">10개</span>
+            <label class="check-fav">
+              <input type="checkbox" id="onlyKit" />
+              키트만 보기
+            </label>
+          </div>
+        </div>
+
+        <div class="program-grid" id="programGrid"></div>
+      </section>
+
+      <section class="section muted" id="audience" aria-labelledby="audienceTitle">
+        <div class="section-head">
+          <p class="eyebrow">By Age Band</p>
+          <h2 id="audienceTitle">대상별 운영 방향</h2>
+        </div>
+        <div class="audience-grid" id="audienceGrid"></div>
+      </section>
+
+      <section class="section" id="modes" aria-labelledby="modesTitle">
+        <div class="section-head">
+          <p class="eyebrow">Operating Modes</p>
+          <h2 id="modesTitle">운영 방식</h2>
+        </div>
+        <div class="mode-grid" id="modeGrid"></div>
+      </section>
+
+      <section class="section muted" id="metrics" aria-labelledby="metricsTitle">
+        <div class="section-head">
+          <p class="eyebrow">Growth Metrics</p>
+          <h2 id="metricsTitle">성과 측정 6축</h2>
+          <p>성적만이 아니라 여섯 영역을 함께 관찰합니다. 각 프로그램은 최소 하나 이상의 결과물을 남깁니다.</p>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+      </section>
+
+      <section class="section kit-section" id="kit" aria-labelledby="kitTitle">
+        <div class="section-head">
+          <p class="eyebrow">Pull When Needed</p>
+          <h2 id="kitTitle">성장 키트 · 필요할 때 꺼내 쓰기</h2>
+          <p>
+            선택한 프로그램을 키트에 담고, 상담·수업 설계·학부모 안내 시 브리프를 복사해 사용합니다. 이 기기
+            브라우저에만 저장됩니다.
+          </p>
+        </div>
+        <div class="kit-layout">
+          <div class="kit-panel">
+            <div class="kit-head">
+              <h3>내 키트 <span id="kitCount">(0)</span></h3>
+              <div class="kit-actions">
+                <button type="button" class="ghost" id="btnClearKit">비우기</button>
+                <button type="button" class="primary" id="btnCopyKit">브리프 복사</button>
+              </div>
+            </div>
+            <ul class="kit-list" id="kitList"></ul>
+            <p class="kit-empty" id="kitEmpty">아직 담긴 프로그램이 없습니다. 카드의 「키트에 담기」를 눌러 주세요.</p>
+          </div>
+          <div class="kit-panel notes">
+            <h3>실행 우선순위</h3>
+            <ol class="priority-list" id="priorityList"></ol>
+            <blockquote class="definition" id="definitionBlock"></blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <strong>드림팩토리</strong> — 학생의 가능성을 발견하고, 훈련하고, 표현하고, 미래를 준비하는 성장 공장
+      </p>
+      <p class="muted-text">Team iCAN · 연합하여 선을 이루는 교육 공동체</p>
+    </footer>
+
+    <!-- Detail drawer -->
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+      <div class="drawer-head">
+        <button type="button" class="icon-btn" id="drawerClose" aria-label="닫기">×</button>
+        <div>
+          <p class="eyebrow" id="drawerEn"></p>
+          <h2 id="drawerTitle"></h2>
+        </div>
+      </div>
+      <div class="drawer-body" id="drawerBody"></div>
+      <div class="drawer-foot">
+        <button type="button" class="ghost" id="drawerCopy">상세 브리프 복사</button>
+        <button type="button" class="primary" id="drawerKit">키트에 담기</button>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="./data/programs.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
