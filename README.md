@@ -55,18 +55,45 @@ vercel deploy --prod --yes
 4. **성장 키트** — 프로그램을 담아 두고, 브리프를 클립보드에 복사 (localStorage)
 5. **성장 모델 5단계 · 성과 6축 · 운영 방식 · 실행 우선순위** 안내
 
-## 10개 프로그램 (메뉴)
+## 프로그램 (메뉴)
 
 1. AI Learning Lab  
 2. Global Reading & Writing  
 3. Speech & Debate Studio  
 4. Book Club & Research Mission  
 5. Coding & Creative Project  
-6. Roadmap FutureLab *(대표 상품 후보)*  
+6. Roadmap FutureLab *(대표)*  
 7. Christian Leadership  
 8. Parent Partnership  
 9. Teacher Growth Lab *(내부)*  
-10. Vacation Intensive Camp *(대표 상품 후보)*  
+10. Vacation Intensive Camp *(대표)*  
+11. AI Homework & School Task Studio *(대표)*  
+12. Overseas Local AX × English Startup Incubator *(대표 · 해외 시장)*  
+13. Space Cadet Foundations *(대표 · 예비우주인)*  
+14. Stellar Traveler · EduSpace Astronaut *(대표 · 항성여행자/우주인)*  
+
+### 추천 키트
+
+- **예비우주인 기초 학습 키트** (`kit-eduspace-cadet`)  
+  - 포함: p13 + AI Learning Lab + Global R&W + Book Club + Coding  
+  - 단계: 우주 지도 → 빛·중력·궤도 → 별·은하 → 로켓·우주인 생활 → 자격 증명  
+  - 명예마크: 성운 입문 → 궤도 탐색가  
+- **항성여행자 · 에듀스페이스 우주인 키트** (`kit-eduspace-traveler`)  
+  - 포함: p14 + p13 + Global R&W + Speech + Coding + FutureLab  
+  - 단계: 항성 미션 설계 → 데이터·모형·코딩 → 영어 브리핑 → 팀 미션 → 명예마크·포트폴리오  
+  - 명예마크: 궤도 → 항성 → 은하 → 명예 우주인 (XP 기반)  
+- **해외 로컬시장 인큐베이팅 키트** (`kit-overseas-ax-startup`)  
+  - 포함: p12 + AI Learning Lab + Global R&W + Speech + Coding + FutureLab  
+  - 단계: 시장 진단 → Ax 설계 → 영어 스타트업 훈련 → 로컬 검증 → 포트폴리오 증명  
+  - 키트 섹션에서 원클릭 담기 · 브리프 복사 가능  
+
+### 에듀스페이스 진급 (XP)
+
+| 단계 | XP | 의미 |
+|------|-----|------|
+| 예비우주인 | 0–99 | 우주 기초 배경지식 |
+| 항성여행자 | 100–299 | 본격 미션·브리핑 |
+| 에듀스페이스 우주인 | 300+ | 명예마크 수여 |
 
 ## 데이터 수정
 

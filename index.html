@@ -23,12 +23,17 @@
         </div>
       </div>
       <nav class="nav" aria-label="주요 메뉴">
-        <a href="#programs">프로그램</a>
-        <a href="#model">성장 모델</a>
-        <a href="#audience">대상별</a>
-        <a href="#kit">꺼내쓰기</a>
-        <a href="#metrics">성과</a>
+        <a href="#programs" id="navPrograms">프로그램</a>
+        <a href="#model" id="navModel">성장 모델</a>
+        <a href="#audience" id="navAudience">대상별</a>
+        <a href="#eduspace" id="navEduspace">우주인</a>
+        <a href="#kit" id="navKit">꺼내쓰기</a>
+        <a href="#metrics" id="navMetrics">성과</a>
       </nav>
+      <div class="language-toggle" id="languageToggle" role="group" aria-label="언어 선택">
+        <button type="button" class="active" data-lang="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <div class="top-actions">
         <button type="button" class="ghost" id="btnExportKit" title="선택한 프로그램 브리프 복사">
           키트 복사
@@ -53,17 +58,17 @@
           <ul class="slogan-row" id="sloganRow" aria-label="핵심 슬로건"></ul>
         </div>
         <aside class="hero-panel" aria-label="시스템 요약">
-          <p class="panel-label">하나의 시스템</p>
-          <h2>진단 → 설계 → 훈련 → 피드백 → 증명</h2>
-          <p>
+          <p class="panel-label" id="heroPanelLabel">하나의 시스템</p>
+          <h2 id="heroPanelTitle">진단 → 설계 → 훈련 → 피드백 → 증명</h2>
+          <p id="heroPanelBody">
             10개 프로그램은 독립 과목이 아닙니다. 리딩·라이팅이 발표로, 북클럽이 리서치로, 리서치가 코딩·창의
             프로젝트로 이어지고, FutureLab이 진로 로드맵으로 정리합니다.
           </p>
           <div class="stat-grid">
-            <div><strong>10</strong><span>성장 프로그램</span></div>
-            <div><strong>5</strong><span>성장 단계</span></div>
-            <div><strong>6</strong><span>성과 축</span></div>
-            <div><strong>4</strong><span>성장 경로 유형</span></div>
+            <div><strong id="statProgramCount">10</strong><span id="statPrograms">성장 프로그램</span></div>
+            <div><strong>5</strong><span id="statSteps">성장 단계</span></div>
+            <div><strong>6</strong><span id="statMetrics">성과 축</span></div>
+            <div><strong>4</strong><span id="statPaths">성장 경로 유형</span></div>
           </div>
         </aside>
       </section>
@@ -72,7 +77,7 @@
         <div class="section-head">
           <p class="eyebrow">Core Growth Model</p>
           <h2 id="modelTitle">핵심 성장 모델 5단계</h2>
-          <p>모든 프로그램은 이 흐름으로 연결됩니다.</p>
+          <p id="modelSubtitle">모든 프로그램은 이 흐름으로 연결됩니다.</p>
         </div>
         <ol class="model-track" id="modelTrack"></ol>
       </section>
@@ -81,7 +86,7 @@
         <div class="section-head">
           <p class="eyebrow">Program Catalog</p>
           <h2 id="programsTitle">10개 프로그램 · 카드형 카탈로그</h2>
-          <p>카드를 눌러 상세를 보고, 키트에 담아 필요할 때 꺼내 쓰세요.</p>
+          <p id="programsSubtitle">카드를 눌러 상세를 보고, 키트에 담아 필요할 때 꺼내 쓰세요.</p>
         </div>
 
         <div class="toolbar">
@@ -96,17 +101,12 @@
           </label>
           <div class="chip-row" id="audienceChips" role="group" aria-label="대상 필터"></div>
           <div class="chip-row" id="pathChips" role="group" aria-label="경로 유형 필터">
-            <button type="button" class="chip active" data-path="all">전체 경로</button>
-            <button type="button" class="chip" data-path="약점 보완형">약점 보완</button>
-            <button type="button" class="chip" data-path="강점 확장형">강점 확장</button>
-            <button type="button" class="chip" data-path="진로 탐색형">진로 탐색</button>
-            <button type="button" class="chip" data-path="프로젝트 완성형">프로젝트 완성</button>
           </div>
           <div class="view-meta">
             <span id="resultCount">10개</span>
             <label class="check-fav">
               <input type="checkbox" id="onlyKit" />
-              키트만 보기
+              <span id="onlyKitLabel">키트만 보기</span>
             </label>
           </div>
         </div>
@@ -134,24 +134,41 @@
         <div class="section-head">
           <p class="eyebrow">Growth Metrics</p>
           <h2 id="metricsTitle">성과 측정 6축</h2>
-          <p>성적만이 아니라 여섯 영역을 함께 관찰합니다. 각 프로그램은 최소 하나 이상의 결과물을 남깁니다.</p>
+          <p id="metricsSubtitle">성적만이 아니라 여섯 영역을 함께 관찰합니다. 각 프로그램은 최소 하나 이상의 결과물을 남깁니다.</p>
         </div>
         <div class="metric-grid" id="metricGrid"></div>
+      </section>
+
+      <section class="section eduspace-section" id="eduspace" aria-labelledby="eduspaceTitle">
+        <div class="section-head">
+          <p class="eyebrow">EduSpace Path</p>
+          <h2 id="eduspaceTitle">에듀스페이스 우주인 성장 경로</h2>
+          <p id="eduspaceSubtitle">
+            예비우주인 기초 → 항성여행자 → 에듀스페이스 우주인. 경험치(XP)에 따라 명예마크를 답니다.
+          </p>
+        </div>
+        <div id="eduspaceRoot"></div>
       </section>
 
       <section class="section kit-section" id="kit" aria-labelledby="kitTitle">
         <div class="section-head">
           <p class="eyebrow">Pull When Needed</p>
           <h2 id="kitTitle">성장 키트 · 필요할 때 꺼내 쓰기</h2>
-          <p>
-            선택한 프로그램을 키트에 담고, 상담·수업 설계·학부모 안내 시 브리프를 복사해 사용합니다. 이 기기
-            브라우저에만 저장됩니다.
+          <p id="kitSubtitle">
+            선택한 프로그램을 키트에 담고, 상담·수업 설계·학부모 안내 시 브리프를 복사해 사용합니다. 추천
+            키트를 한 번에 담을 수도 있습니다. 이 기기 브라우저에만 저장됩니다.
           </p>
         </div>
+
+        <div class="preset-block">
+          <h3 id="presetTitle">추천 키트</h3>
+          <div class="preset-kit-list" id="presetKitList"></div>
+        </div>
+
         <div class="kit-layout">
           <div class="kit-panel">
             <div class="kit-head">
-              <h3>내 키트 <span id="kitCount">(0)</span></h3>
+              <h3><span id="kitPanelTitle">내 키트</span> <span id="kitCount">(0)</span></h3>
               <div class="kit-actions">
                 <button type="button" class="ghost" id="btnClearKit">비우기</button>
                 <button type="button" class="primary" id="btnCopyKit">브리프 복사</button>
@@ -161,7 +178,7 @@
             <p class="kit-empty" id="kitEmpty">아직 담긴 프로그램이 없습니다. 카드의 「키트에 담기」를 눌러 주세요.</p>
           </div>
           <div class="kit-panel notes">
-            <h3>실행 우선순위</h3>
+            <h3 id="priorityTitle">실행 우선순위</h3>
             <ol class="priority-list" id="priorityList"></ol>
             <blockquote class="definition" id="definitionBlock"></blockquote>
           </div>
@@ -170,10 +187,10 @@
     </main>
 
     <footer class="footer">
-      <p>
+      <p id="footerLine">
         <strong>드림팩토리</strong> — 학생의 가능성을 발견하고, 훈련하고, 표현하고, 미래를 준비하는 성장 공장
       </p>
-      <p class="muted-text">Team iCAN · 연합하여 선을 이루는 교육 공동체</p>
+      <p class="muted-text" id="footerSubline">Team iCAN · 연합하여 선을 이루는 교육 공동체</p>
     </footer>
 
     <!-- Detail drawer -->

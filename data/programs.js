@@ -87,24 +87,26 @@ window.DREAM_FACTORY = {
       id: "elem-upper",
       label: "초등 고학년",
       focus: "학습력·사고력 기초 구축",
-      programs: ["p1", "p2", "p3", "p4", "p6"],
-      note: "리딩·라이팅, 발표, 리서치, AI 활용, 진로 탐색을 균형 있게 시작",
+      programs: ["p1", "p2", "p3", "p4", "p6", "p13"],
+      note: "리딩·라이팅, 발표, 리서치, AI 활용, 진로 탐색, 예비우주인 기초를 균형 있게 시작",
     },
     {
       id: "middle",
       label: "중학생",
       focus: "분석·에세이·진로 강화",
-      programs: ["p2", "p3", "p4", "p5", "p6", "p8"],
-      note: "분석적 독해, 에세이, 토론, 리서치, 프로젝트, 진로 로드맵 강화",
+      programs: ["p2", "p3", "p4", "p5", "p6", "p8", "p12", "p13", "p14"],
+      note: "분석적 독해, 에세이, 토론, 리서치, 프로젝트, 진로 로드맵, 해외 시장·우주 경로 탐색",
     },
     {
       id: "high",
       label: "고등학생",
       focus: "포트폴리오·진로 정체성",
-      programs: ["p2", "p3", "p5", "p6", "p10"],
-      note: "결과물 중심, 진로 연결, 리서치와 글쓰기 중심 설계",
+      programs: ["p2", "p3", "p5", "p6", "p10", "p12", "p13", "p14"],
+      note: "결과물 중심, 진로 연결, 해외 인큐베이팅·에듀스페이스 우주인 포트폴리오 설계",
     },
   ],
+
+
 
   operatingModes: [
     {
@@ -136,13 +138,335 @@ window.DREAM_FACTORY = {
 
   priorities: [
     "홈페이지·앱 프로그램 소개 페이지",
-    "10개 프로그램 카드형 한 화면 정리",
-    "프로그램별 대상·목표·활동·결과물 표시",
+    "프로그램 카드형 한 화면 정리",
+    "예비우주인 → 항성여행자 → 에듀스페이스 우주인 경로 운영",
+    "해외 로컬시장 인큐베이팅 키트(Ax + 영어 스타트업) 우선 운영",
     "신청 전 진단·상담 흐름 연결",
     "학부모용 성장 리포트 샘플",
     "방학 캠프 + FutureLab 대표 상품 우선 운영",
     "교사 훈련·품질 관리 내부 매뉴얼",
   ],
+
+  /**
+   * EduSpace astronaut path: Cadet → Stellar Traveler → EduSpace Astronaut
+   * Honor marks unlock by accumulated XP (experience).
+   */
+  eduspacePath: {
+    titleKo: "에듀스페이스 우주인 성장 경로",
+    titleEn: "EduSpace Astronaut Growth Path",
+    taglineKo: "우주 기초 지식으로 예비우주인이 되고, 경험치로 항성여행자·에듀스페이스 우주인 명예마크를 단다.",
+    taglineEn: "Build space foundations as a Cadet, then earn Stellar Traveler and EduSpace Astronaut honor marks by XP.",
+    missionKo:
+      "학생은 먼저 우주 관련 기초 배경지식을 익혀 예비우주인 단계를 통과합니다. 이후 본격적으로 우주로 나아가 항성여행자로 활동하며, 에듀스페이스 우주인으로서 경험치(XP)에 따라 명예마크를 획득합니다.",
+    missionEn:
+      "Students first master space foundations as Cadets. They then advance as Stellar Travelers and earn EduSpace Astronaut honor marks according to experience (XP).",
+    xpNoteKo: "XP는 미션 완료, 리서치, 실험, 발표, 캠프, 피어 피드백, 포트폴리오 제출로 적립합니다.",
+    xpNoteEn: "XP is earned through missions, research, labs, presentations, camps, peer feedback, and portfolio submissions.",
+    ranks: [
+      {
+        id: "cadet",
+        order: 1,
+        titleKo: "예비우주인",
+        titleEn: "Space Cadet",
+        icon: "🛰️",
+        xpMin: 0,
+        xpMax: 99,
+        color: "#0369a1",
+        stageKo: "기초 배경지식 단계",
+        stageEn: "Foundation knowledge stage",
+        bodyKo:
+          "태양계, 지구·달, 별·은하, 로켓·궤도, 우주인 생활, 우주 윤리의 기초를 배워 ‘우주인재’의 입문 자격을 갖춥니다.",
+        bodyEn:
+          "Learn solar system, Earth–Moon, stars and galaxies, rockets and orbits, astronaut life, and space ethics to qualify as a space talent beginner.",
+        kitId: "kit-eduspace-cadet",
+        programIds: ["p13", "p1", "p2", "p4", "p5"],
+        unlockKo: "예비우주인 기초 키트 완료 + 기초 퀴즈 80% + 우주 저널 1권",
+        unlockEn: "Complete Cadet foundation kit + 80% basics quiz + one space journal",
+      },
+      {
+        id: "stellar-traveler",
+        order: 2,
+        titleKo: "항성여행자",
+        titleEn: "Stellar Traveler",
+        icon: "☄️",
+        xpMin: 100,
+        xpMax: 299,
+        color: "#7c3aed",
+        stageKo: "본격 우주 진출 단계",
+        stageEn: "Active space expedition stage",
+        bodyKo:
+          "예비우주인 단계를 통과한 뒤, 미션·실험·리서치·영어 브리핑으로 실제 ‘항성 여행’ 프로젝트에 참여합니다.",
+        bodyEn:
+          "After Cadet, join real stellar-travel projects through missions, labs, research, and English briefings.",
+        kitId: "kit-eduspace-traveler",
+        programIds: ["p14", "p13", "p2", "p3", "p5", "p6"],
+        unlockKo: "예비우주인 통과 + XP 100 이상 + 미션 로그 3회 + 항성 브리핑 1회",
+        unlockEn: "Cadet clearance + XP ≥ 100 + 3 mission logs + one stellar briefing",
+      },
+      {
+        id: "eduspace-astronaut",
+        order: 3,
+        titleKo: "에듀스페이스 우주인",
+        titleEn: "EduSpace Astronaut",
+        icon: "👨‍🚀",
+        xpMin: 300,
+        xpMax: null,
+        color: "#0f766e",
+        stageKo: "명예마크 수여 단계",
+        stageEn: "Honor-mark award stage",
+        bodyKo:
+          "에듀스페이스 우주인으로 인정받으며, 누적 경험치에 따라 성운·궤도·항성·은하·명예 마크를 답니다.",
+        bodyEn:
+          "Recognized as an EduSpace Astronaut and awarded Nebula, Orbit, Star, Galaxy, and Honor marks by cumulative XP.",
+        kitId: "kit-eduspace-traveler",
+        programIds: ["p14", "p13", "p3", "p5", "p6", "p7"],
+        unlockKo: "항성여행자 통과 + XP 300 이상 + 데모데이 발표 + 포트폴리오 제출",
+        unlockEn: "Stellar Traveler clearance + XP ≥ 300 + demo-day talk + portfolio submission",
+      },
+    ],
+    honorMarks: [
+      {
+        id: "mark-nebula",
+        icon: "🌌",
+        titleKo: "성운 입문 마크",
+        titleEn: "Nebula Initiate Mark",
+        xpRequired: 50,
+        rankId: "cadet",
+        bodyKo: "우주 기초 개념과 호기심 저널을 완성한 예비우주인에게 수여",
+        bodyEn: "Awarded to Cadets who complete core concepts and a curiosity journal",
+      },
+      {
+        id: "mark-orbit",
+        icon: "🛸",
+        titleKo: "궤도 탐색가 마크",
+        titleEn: "Orbit Explorer Mark",
+        xpRequired: 100,
+        rankId: "stellar-traveler",
+        bodyKo: "궤도·로켓 기초 미션과 1차 항성 브리핑을 통과한 항성여행자",
+        bodyEn: "For Stellar Travelers who pass orbit/rocket missions and a first stellar briefing",
+      },
+      {
+        id: "mark-star",
+        icon: "⭐",
+        titleKo: "항성 항해사 마크",
+        titleEn: "Star Navigator Mark",
+        xpRequired: 200,
+        rankId: "stellar-traveler",
+        bodyKo: "항성·은하 리서치와 팀 미션 로그를 누적한 항성여행자",
+        bodyEn: "For Stellar Travelers with star/galaxy research and team mission logs",
+      },
+      {
+        id: "mark-galaxy",
+        icon: "🌠",
+        titleKo: "은하 개척자 마크",
+        titleEn: "Galaxy Pioneer Mark",
+        xpRequired: 300,
+        rankId: "eduspace-astronaut",
+        bodyKo: "에듀스페이스 우주인 입문 — 프로젝트 발표와 영문 미션 브리프 완성",
+        bodyEn: "EduSpace Astronaut entry — project talk and English mission brief completed",
+      },
+      {
+        id: "mark-honor",
+        icon: "🏅",
+        titleKo: "에듀스페이스 명예 우주인 마크",
+        titleEn: "EduSpace Honor Astronaut Mark",
+        xpRequired: 500,
+        rankId: "eduspace-astronaut",
+        bodyKo: "높은 경험치와 리더십·봉사·멘토링을 증명한 최고 명예 마크",
+        bodyEn: "Highest honor for high XP plus leadership, service, and mentoring evidence",
+      },
+    ],
+    xpActions: [
+      { id: "mission", titleKo: "주간 우주 미션 완료", titleEn: "Weekly space mission", xp: 15 },
+      { id: "journal", titleKo: "우주 저널·관찰 노트", titleEn: "Space journal / observation notes", xp: 10 },
+      { id: "lab", titleKo: "실험·모형·코딩 랩", titleEn: "Lab, model, or coding workshop", xp: 20 },
+      { id: "research", titleKo: "리서치 브리프 제출", titleEn: "Research brief submission", xp: 25 },
+      { id: "pitch", titleKo: "영어/한국어 미션 브리핑", titleEn: "Mission briefing (EN/KO)", xp: 30 },
+      { id: "camp", titleKo: "우주 캠프·집중 주간", titleEn: "Space camp / intensive week", xp: 50 },
+      { id: "demo", titleKo: "데모데이·포트폴리오 발표", titleEn: "Demo day / portfolio presentation", xp: 40 },
+      { id: "mentor", titleKo: "동료 멘토링·섬김", titleEn: "Peer mentoring / service", xp: 20 },
+    ],
+  },
+
+  /**
+   * Ready-made kits: one click loads a curated program stack into 내 키트.
+   * Use for consulting, camps, overseas incubating, and EduSpace astronaut tracks.
+   */
+  presetKits: [
+    {
+      id: "kit-eduspace-cadet",
+      icon: "🛰️",
+      titleKo: "예비우주인 기초 학습 키트",
+      titleEn: "Space Cadet Foundation Kit",
+      subtitleKo: "우주 기초 배경지식 × 예비우주인 입문",
+      subtitleEn: "Space foundations × Cadet entry",
+      missionKo:
+        "우주인재로 거듭나기 위한 첫 단계입니다. 태양계·지구·별·로켓·우주인 생활·우주 윤리 등 기초 배경지식을 배우고, 예비우주인 자격을 준비합니다.",
+      missionEn:
+        "The first step toward becoming space talent. Learn solar system, Earth, stars, rockets, astronaut life, and space ethics to prepare for Space Cadet status.",
+      programIds: ["p13", "p1", "p2", "p4", "p5"],
+      pathId: "eduspace",
+      rankId: "cadet",
+      phases: [
+        {
+          step: 1,
+          titleKo: "우주 지도 그리기",
+          titleEn: "Map the cosmos",
+          bodyKo: "태양계 구조, 행성·위성, 지구·달 관계를 그림과 영어로 정리한다.",
+          bodyEn: "Map the solar system, planets, moons, and Earth–Moon relations in drawings and English.",
+        },
+        {
+          step: 2,
+          titleKo: "빛·중력·궤도 기초",
+          titleEn: "Light, gravity, orbit basics",
+          bodyKo: "낮과 밤, 계절, 중력, 궤도의 기본 원리를 실험·모형으로 이해한다.",
+          bodyEn: "Understand day/night, seasons, gravity, and orbits through labs and models.",
+        },
+        {
+          step: 3,
+          titleKo: "별·은하·우주 스케일",
+          titleEn: "Stars, galaxies, cosmic scale",
+          bodyKo: "별의 일생, 성운, 은하, 우주 거리 감각을 리서치 노트로 남긴다.",
+          bodyEn: "Document stellar life cycles, nebulae, galaxies, and cosmic scale in research notes.",
+        },
+        {
+          step: 4,
+          titleKo: "로켓·우주인 생활",
+          titleEn: "Rockets & astronaut life",
+          bodyKo: "발사·궤도 진입, 우주복, 생활 시스템, 국제우주정거장 일상을 학습한다.",
+          bodyEn: "Study launch, orbit insertion, suits, life support, and ISS daily life.",
+        },
+        {
+          step: 5,
+          titleKo: "예비우주인 자격 증명",
+          titleEn: "Cadet clearance proof",
+          bodyKo: "기초 퀴즈, 우주 저널, 1분 우주 브리핑으로 예비우주인 단계를 통과한다.",
+          bodyEn: "Pass Cadet stage via basics quiz, space journal, and a 1-minute space briefing.",
+        },
+      ],
+      durationKo: "6~8주 기초형 · 방학 캠프 2주 집중형 가능",
+      durationEn: "6–8 week foundation track · 2-week vacation intensive option",
+      targetMarketsKo: ["초등 고학년", "중학생 입문", "가족 우주 캠프", "방과후 우주 클럽"],
+      targetMarketsEn: ["Upper elementary", "Middle-school entry", "Family space camp", "After-school space club"],
+      honorPreviewIds: ["mark-nebula", "mark-orbit"],
+      featured: true,
+    },
+    {
+      id: "kit-eduspace-traveler",
+      icon: "🚀",
+      titleKo: "항성여행자 · 에듀스페이스 우주인 키트",
+      titleEn: "Stellar Traveler · EduSpace Astronaut Kit",
+      subtitleKo: "본격 우주 진출 × XP 명예마크",
+      subtitleEn: "Active space path × XP honor marks",
+      missionKo:
+        "예비우주인 이후 본격적으로 우주로 나아가는 단계입니다. 항성여행자로 미션을 수행하고, 에듀스페이스 우주인으로서 경험치에 따라 명예마크를 획득합니다.",
+      missionEn:
+        "After Cadet, advance into active space work. Operate as a Stellar Traveler and earn EduSpace Astronaut honor marks by experience.",
+      programIds: ["p14", "p13", "p2", "p3", "p5", "p6"],
+      pathId: "eduspace",
+      rankId: "stellar-traveler",
+      phases: [
+        {
+          step: 1,
+          titleKo: "항성 미션 설계",
+          titleEn: "Design stellar mission",
+          bodyKo: "목표 천체·미션 목적·성공 기준을 정하고 미션 로그를 시작한다.",
+          bodyEn: "Define target body, mission purpose, success criteria, and open a mission log.",
+        },
+        {
+          step: 2,
+          titleKo: "데이터·모형·코딩",
+          titleEn: "Data, models, coding",
+          bodyKo: "관측 데이터, 물리 모형, AI·코딩 도구로 미션 시뮬레이션을 만든다.",
+          bodyEn: "Build mission simulations with observation data, physics models, and AI/coding tools.",
+        },
+        {
+          step: 3,
+          titleKo: "영어 미션 브리핑",
+          titleEn: "English mission briefing",
+          bodyKo: "영문 미션 브리프와 발표로 국제 우주 커뮤니케이션을 훈련한다.",
+          bodyEn: "Train international space communication with English briefs and talks.",
+        },
+        {
+          step: 4,
+          titleKo: "팀 미션·피드백",
+          titleEn: "Team mission & feedback",
+          bodyKo: "역할 분담, 위험 관리, 피어 피드백으로 협업 우주 미션을 수행한다.",
+          bodyEn: "Run collaborative space missions with roles, risk management, and peer feedback.",
+        },
+        {
+          step: 5,
+          titleKo: "명예마크·포트폴리오",
+          titleEn: "Honor marks & portfolio",
+          bodyKo: "XP를 누적하고 데모데이·포트폴리오로 에듀스페이스 우주인 명예마크를 단다.",
+          bodyEn: "Accumulate XP and earn EduSpace Astronaut honor marks via demo day and portfolio.",
+        },
+      ],
+      durationKo: "8~12주 프로젝트형 · 캠프 3~4주 집중형",
+      durationEn: "8–12 week project track · 3–4 week camp intensive",
+      targetMarketsKo: ["중학생", "고등학생", "진로·포트폴리오 트랙", "국제학교 연계"],
+      targetMarketsEn: ["Middle school", "High school", "Career/portfolio track", "International school link"],
+      honorPreviewIds: ["mark-orbit", "mark-star", "mark-galaxy", "mark-honor"],
+      featured: true,
+    },
+    {
+      id: "kit-overseas-ax-startup",
+      icon: "🌍",
+      titleKo: "해외 로컬시장 인큐베이팅 키트",
+      titleEn: "Overseas Local-Market Incubating Kit",
+      subtitleKo: "Ax 교육 × 영어 스타트업 × 로컬 시장 검증",
+      subtitleEn: "AX education × English startup × local-market validation",
+      missionKo:
+        "해외 로컬 시장을 눈여겨보는 학생이 AI(Ax)와 영어로 문제를 발견하고, 스타트업 방식으로 솔루션을 설계·검증·피칭하는 인큐베이팅 트랙입니다.",
+      missionEn:
+        "An incubating track for students eyeing overseas local markets: discover problems with AI (AX) and English, then design, validate, and pitch solutions like a startup.",
+      programIds: ["p12", "p1", "p2", "p3", "p5", "p6"],
+      phases: [
+        {
+          step: 1,
+          titleKo: "시장 진단",
+          titleEn: "Market Diagnose",
+          bodyKo: "관심 국가·도시·커뮤니티의 로컬 문제를 영어·AI로 조사한다.",
+          bodyEn: "Research local problems in a target country, city, or community with English and AI.",
+        },
+        {
+          step: 2,
+          titleKo: "Ax 설계",
+          titleEn: "AX Design",
+          bodyKo: "AI 도구로 고객 페르소나, 솔루션 가설, MVP 범위를 설계한다.",
+          bodyEn: "Use AI tools to design customer personas, solution hypotheses, and MVP scope.",
+        },
+        {
+          step: 3,
+          titleKo: "영어 스타트업 훈련",
+          titleEn: "English Startup Train",
+          bodyKo: "영어 피치, 랜딩 카피, 인터뷰 스크립트로 시장 언어를 익힌다.",
+          bodyEn: "Practice market language through English pitches, landing copy, and interview scripts.",
+        },
+        {
+          step: 4,
+          titleKo: "로컬 검증",
+          titleEn: "Local Validate",
+          bodyKo: "가상 고객 인터뷰·데모데이로 해외 로컬 시장 반응을 검증한다.",
+          bodyEn: "Validate overseas local-market response via mock interviews and demo day.",
+        },
+        {
+          step: 5,
+          titleKo: "포트폴리오 증명",
+          titleEn: "Prove & Portfolio",
+          bodyKo: "피치덱, 프로토타입, 시장 브리프, 로드맵을 성장 증빙으로 남긴다.",
+          bodyEn: "Leave a pitch deck, prototype, market brief, and roadmap as growth evidence.",
+        },
+      ],
+      durationKo: "8~12주 프로젝트형 · 방학 캠프 4주 집중형 가능",
+      durationEn: "8–12 week project track · 4-week vacation intensive option",
+      targetMarketsKo: ["미국 로컬 커뮤니티", "캐나다", "호주/뉴질랜드", "동남아 허브 도시", "한인 디아스포라 로컬 니치"],
+      targetMarketsEn: ["US local communities", "Canada", "Australia/NZ", "SE Asia hub cities", "Korean diaspora local niches"],
+      featured: true,
+    },
+  ],
+
+
 
   programs: [
     {
@@ -561,5 +885,349 @@ window.DREAM_FACTORY = {
       status: "ready",
       priority: true,
     },
+    {
+      id: "p11",
+      num: 11,
+      titleKo: "AI 홈워크·스쿨태스크 지원 프로그램",
+      titleEn: "AI Homework & School Task Studio",
+      icon: "🧭",
+      accent: "#2563eb",
+      category: "flagship",
+      audiences: ["elem-upper", "middle", "high"],
+      pathTypes: ["약점 보완형", "강점 확장형", "프로젝트 완성형"],
+      metrics: ["learning", "thinking", "language", "expression"],
+      overview:
+        "온라인 숙제와 학교 과제를 대신 해결해 주는 프로그램이 아니라, 학생이 과제를 이해하고 계획하고 초안을 만들고 피드백을 받아 스스로 완성하도록 돕는 AI 시대형 학습 코칭 프로그램입니다.",
+      goals: [
+        "과제 지시문을 정확히 읽고 요구 조건을 스스로 정리한다.",
+        "AI를 정답 복사용이 아니라 힌트, 설명, 계획, 피드백 도구로 사용한다.",
+        "학교 과제, 온라인 홈워크, 리서치, 글쓰기, 발표 준비를 단계별로 수행한다.",
+        "표절, 무단 대필, 출처 누락을 피하고 정직한 학습 윤리를 세운다.",
+        "부모와 교사가 확인할 수 있는 과제 수행 기록과 성장 리포트를 남긴다.",
+      ],
+      activities: [
+        "과제 지시문 분석",
+        "마감일·난이도·필요 자료 정리",
+        "질문 만들기와 막힘 진단",
+        "AI 힌트 사용법 훈련",
+        "수학·과학 단계별 설명 노트",
+        "영어·사회·역사 리서치와 글쓰기 초안",
+        "제출 전 체크리스트",
+        "출처와 인용 정리",
+        "부모·교사용 진행 리포트",
+      ],
+      outcomes: [
+        "주간 홈워크 플래너",
+        "과제 분석 시트",
+        "AI 사용 기록표",
+        "단계별 풀이·설명 노트",
+        "글쓰기·리서치 초안과 수정본",
+        "제출 전 체크리스트",
+        "월간 학교 과제 성장 리포트",
+      ],
+      levels: {
+        beginner: "과제 지시문 읽기, 마감 관리, 힌트 요청, 짧은 설명 노트",
+        intermediate: "문제 풀이 과정 설명, 리서치 자료 비교, 초안 작성과 수정",
+        advanced: "장기 프로젝트 관리, 출처 검증, 고급 글쓰기 피드백, 발표 자료 완성",
+      },
+      campExamples: [
+        "Back-to-School Homework Reset",
+        "AI Study Skills Bootcamp",
+        "School Project Rescue Week",
+        "Research & Writing Support Lab",
+      ],
+      status: "ready",
+      priority: true,
+    },
+    {
+      id: "p12",
+      num: 12,
+      titleKo: "해외 로컬시장 Ax·영어 스타트업 인큐베이팅",
+      titleEn: "Overseas Local AX × English Startup Incubator",
+      icon: "🚀",
+      accent: "#0f766e",
+      category: "flagship",
+      audiences: ["middle", "high"],
+      pathTypes: ["진로 탐색형", "프로젝트 완성형", "강점 확장형"],
+      metrics: ["creativity", "language", "thinking", "expression", "learning"],
+      overview:
+        "해외 로컬 시장을 겨냥한 인큐베이팅 훈련입니다. Ax(AI Transformation) 교육과 영어 스타트업 교육을 결합해, 학생이 특정 해외 로컬 시장의 문제를 발견하고 AI로 솔루션을 설계하며 영어로 피칭·검증·포트폴리오화하는 성장 트랙입니다. 단순 영어 수업이나 코딩 체험이 아니라, 해외 로컬 시장에 통할 수 있는 문제 정의·고객 검증·MVP·피치의 스타트업 루프를 훈련합니다.",
+      goals: [
+        "관심 해외 로컬 시장(도시·커뮤니티·니치)을 영어로 리서치하고 문제를 정의한다.",
+        "Ax 도구로 고객 페르소나, 경쟁 분석, 솔루션 가설, MVP 범위를 설계한다.",
+        "영어 피치, 랜딩 카피, 인터뷰 스크립트, 데모 발표를 실전 수준으로 훈련한다.",
+        "가상 고객 검증과 데모데이를 통해 시장 반응을 측정하고 피벗 근거를 남긴다.",
+        "해외 진출·글로벌 포트폴리오·진로 로드맵으로 연결 가능한 결과물을 완성한다.",
+      ],
+      activities: [
+        "해외 로컬 시장 스캔 (국가·도시·커뮤니티 선택)",
+        "영어 로컬 문제 인터뷰 스크립트 작성",
+        "Ax 리서치: 트렌드·경쟁사·규제·가격 감각 조사",
+        "고객 페르소나 & Jobs-to-be-Done 맵",
+        "솔루션 가설 캔버스 (Problem–Solution Fit)",
+        "AI 활용 MVP/프로토타입 스케치·랜딩 페이지",
+        "영어 엘리베이터 피치 (30초·60초·3분)",
+        "피치덱 구성 (Problem → Solution → Market → Traction → Ask)",
+        "가상 고객 인터뷰 & 피드백 루프",
+        "로컬 시장 브리프 영문 작성",
+        "데모데이 리허설 및 피어 피드백",
+        "윤리·저작권·AI 사용 투명성 체크",
+      ],
+      outcomes: [
+        "Target Local Market Brief (영문 1~2p)",
+        "Customer Persona + JTBD 맵",
+        "Problem–Solution Canvas",
+        "English Pitch Deck (8~12 slides)",
+        "30s / 60s / 3min Pitch Script & 녹화본",
+        "AI-assisted MVP / Landing Copy",
+        "Customer Interview Log (검증 기록)",
+        "Demo Day 발표 자료",
+        "Overseas Growth Roadmap (다음 12주)",
+      ],
+      levels: {
+        beginner:
+          "관심 시장 1곳 선택, 영어 문제 문장 5개, 페르소나 1명, 30초 피치, 1p 시장 브리프",
+        intermediate:
+          "경쟁 분석, JTBD, 솔루션 캔버스, 60초 피치, 랜딩 카피, 가상 인터뷰 3회, 8장 피치덱",
+        advanced:
+          "로컬 검증 지표, MVP 프로토타입, 3분 피치+Q&A, 영문 시장 브리프, 12주 해외 성장 로드맵, 데모데이",
+      },
+      campExamples: [
+        "Overseas Local Market Sprint (2주)",
+        "AX × English Pitch Intensive (1주)",
+        "Global Niche Startup Bootcamp (4주)",
+        "US/Canada Local Problem Lab",
+        "SE Asia Hub City Incubator Week",
+        "Diaspora Niche Venture Studio",
+        "Demo Day: Pitch in English",
+      ],
+      status: "ready",
+      priority: true,
+      kitBundleId: "kit-overseas-ax-startup",
+    },
+    {
+      id: "p13",
+      num: 13,
+      titleKo: "예비우주인 기초 배경지식 프로그램",
+      titleEn: "Space Cadet Foundations",
+      icon: "🛰️",
+      accent: "#0369a1",
+      category: "flagship",
+      audiences: ["elem-upper", "middle", "high"],
+      pathTypes: ["강점 확장형", "진로 탐색형", "프로젝트 완성형"],
+      metrics: ["learning", "thinking", "creativity", "expression"],
+      overview:
+        "우주인재로 거듭나기 위한 입문 단계입니다. 태양계, 지구·달, 별과 은하, 로켓과 궤도, 우주인 생활, 우주 탐사의 역사와 윤리 등 우주 관련 기초 배경지식을 배워 예비우주인 자격을 준비합니다. 암기 위주가 아니라 관찰·모형·저널·짧은 브리핑으로 ‘우주를 읽는 힘’을 기릅니다.",
+      goals: [
+        "태양계와 지구·달 시스템의 기본 구조를 설명하고 그림으로 표현한다.",
+        "중력, 궤도, 낮·밤, 계절의 원리를 일상 언어와 간단한 모형으로 이해한다.",
+        "별·성운·은하 등 우주 스케일을 리서치 노트와 비유로 정리한다.",
+        "로켓 발사, 우주복, 생명유지, 우주정거장 생활을 기초 수준에서 이해한다.",
+        "예비우주인 기초 퀴즈·우주 저널·1분 브리핑으로 입문 단계를 통과한다.",
+      ],
+      activities: [
+        "태양계 지도·행성 카드 만들기",
+        "지구·달·태양 모형 실험 (위상·일식·월식)",
+        "중력·궤도 미니 실험과 스케치",
+        "별자리·성운·은하 관찰 저널",
+        "우주 스케일 비유 쓰기 (모래알·축구장 등)",
+        "로켓 원리와 발사 단계 스토리보드",
+        "우주인 하루 일과·우주 음식·운동 리서치",
+        "국제우주정거장(ISS) 가상 투어 노트",
+        "우주 탐사 역사 타임라인",
+        "우주 쓰레기·행성 보호 윤리 토론",
+        "영어 우주 어휘 카드 (planet, orbit, gravity…)",
+        "예비우주인 1분 브리핑 연습",
+      ],
+      outcomes: [
+        "태양계·우주 스케일 포스터",
+        "우주 관찰·호기심 저널",
+        "중력·궤도 실험 리포트",
+        "우주인 생활 브리프 (1p)",
+        "예비우주인 기초 퀴즈 결과",
+        "1분 우주 브리핑 영상 또는 대본",
+        "성운 입문 마크 신청 체크리스트",
+      ],
+      levels: {
+        beginner: "행성 이름·순서, 지구·달 그림, 짧은 관찰 저널, 30초 우주 소개",
+        intermediate: "궤도·중력 설명, 성운·은하 리서치, 1분 브리핑, 기초 퀴즈 80%",
+        advanced: "영문 키워드 브리프, 윤리 토론 의견문, 팀 포스터, 예비우주인 통과 포트폴리오",
+      },
+      campExamples: [
+        "Space Cadet Bootcamp (1주)",
+        "Solar System Maker Week",
+        "Moon & Orbit Lab",
+        "ISS Life Skills Day",
+        "Family Space Night",
+        "Cadet Clearance Demo",
+      ],
+      status: "ready",
+      priority: true,
+      kitBundleId: "kit-eduspace-cadet",
+      eduspaceRank: "cadet",
+    },
+    {
+      id: "p14",
+      num: 14,
+      titleKo: "항성여행자 · 에듀스페이스 우주인 프로그램",
+      titleEn: "Stellar Traveler · EduSpace Astronaut",
+      icon: "🚀",
+      accent: "#7c3aed",
+      category: "flagship",
+      audiences: ["middle", "high"],
+      pathTypes: ["진로 탐색형", "프로젝트 완성형", "강점 확장형"],
+      metrics: ["thinking", "creativity", "expression", "learning", "character"],
+      overview:
+        "예비우주인 단계를 통과한 뒤 본격적으로 우주로 나아가는 프로그램입니다. 항성여행자로서 미션을 설계·수행하고, 에듀스페이스 우주인으로서 경험치(XP)를 쌓아 궤도·항성·은하·명예 마크를 획득합니다. 리서치, 모형·코딩, 영어 미션 브리핑, 팀 협업, 데모데이 발표로 ‘우주인 경험’을 포트폴리오에 남깁니다.",
+      goals: [
+        "목표 천체와 미션 목적을 정하고 성공 기준이 있는 미션 로그를 운영한다.",
+        "관측 데이터·물리 모형·AI/코딩으로 미션 시뮬레이션을 만든다.",
+        "영어·한국어 미션 브리핑으로 국제 우주 커뮤니케이션을 훈련한다.",
+        "역할·위험 관리·피어 피드백으로 팀 우주 미션을 완수한다.",
+        "XP를 누적해 항성여행자·에듀스페이스 우주인 명예마크를 획득한다.",
+      ],
+      activities: [
+        "항성 미션 캔버스 (목표·위험·성공 기준)",
+        "천체 데이터 리서치와 비교 분석",
+        "궤도·추진·착륙 시나리오 설계",
+        "AI·코딩 기반 미션 시뮬레이터 미니 프로젝트",
+        "영문 Mission Brief (1~2p)",
+        "3분 미션 브리핑 & Q&A",
+        "팀 역할 카드 (Commander, Science, Comms, Engineer)",
+        "위험 관리·비상 절차 워크숍",
+        "피어 피드백 루브릭 적용",
+        "XP 미션 보드 기록 (저널·랩·발표·캠프)",
+        "데모데이·포트폴리오 쇼케이스",
+        "후배 예비우주인 멘토링·섬김 미션",
+      ],
+      outcomes: [
+        "Stellar Mission Log",
+        "Mission Canvas & Risk Sheet",
+        "English Mission Brief",
+        "시뮬레이션/모형/코딩 결과물",
+        "3분 브리핑 영상·대본",
+        "팀 미션 리포트",
+        "XP 기록표 & 명예마크 신청서",
+        "에듀스페이스 우주인 포트폴리오",
+        "12주 우주 성장 로드맵",
+      ],
+      levels: {
+        beginner: "미션 주제 1개, 로그 3회, 60초 브리핑, 궤도 탐색가 마크 도전 (XP 100+)",
+        intermediate: "팀 미션, 영문 브리프, 시뮬/모형, 항성 항해사 마크 (XP 200+)",
+        advanced: "데모데이, 멘토링, 은하·명예 마크 (XP 300~500+), 진로 연결 포트폴리오",
+      },
+      campExamples: [
+        "Stellar Traveler Sprint (2주)",
+        "EduSpace Astronaut Academy (4주)",
+        "Mission Brief in English",
+        "Orbit Simulation Hack Week",
+        "Demo Day: Honor Mark Ceremony",
+        "Cadet-to-Astronaut Bridge Camp",
+      ],
+      status: "ready",
+      priority: true,
+      kitBundleId: "kit-eduspace-traveler",
+      eduspaceRank: "stellar-traveler",
+    },
   ],
 };
+
+
+
+(function enrichDreamFactoryEnglish() {
+  const DF = window.DREAM_FACTORY;
+
+  const metricText = {
+    learning: ["Learning Power", "Self-direction, questions, planning, and reflection"],
+    language: ["Language Power", "Reading, writing, speaking, vocabulary, and sentence control"],
+    thinking: ["Thinking Power", "Analysis, comparison, inference, critical thinking, and problem solving"],
+    expression: ["Expression", "Presentations, debate, writing, and visual communication"],
+    creativity: ["Creativity", "Project planning, production, application, and digital outputs"],
+    character: ["Character & Leadership", "Responsibility, collaboration, service, honesty, and community"],
+  };
+
+  DF.metrics.forEach((metric) => {
+    const text = metricText[metric.id];
+    if (!text) return;
+    metric.titleEn = text[0];
+    metric.bodyEn = text[1];
+  });
+
+  const audienceText = {
+    "elem-lower": [
+      "Lower Elementary",
+      "Interest, habits, and confidence in expression",
+      "Reading habits, short speaking, story-based activities, creative projects, and gratitude journals",
+    ],
+    "elem-upper": [
+      "Upper Elementary",
+      "Foundations for learning and thinking",
+      "A balanced start in reading, writing, speaking, research, AI use, future exploration, and Space Cadet foundations",
+    ],
+    middle: [
+      "Middle School",
+      "Analysis, essays, and future direction",
+      "Analytical reading, essays, debate, research, projects, roadmaps, overseas markets, and EduSpace astronaut pathways",
+    ],
+    high: [
+      "High School",
+      "Portfolio and future identity",
+      "Output-driven planning with overseas incubating and EduSpace astronaut portfolios",
+    ],
+  };
+
+  DF.audiences.forEach((audience) => {
+    const text = audienceText[audience.id];
+    if (!text) return;
+    audience.labelEn = text[0];
+    audience.focusEn = text[1];
+    audience.noteEn = text[2];
+  });
+
+  const modelBodyEn = {
+    diagnose:
+      "Identify reading, writing, speaking, thinking, habits, interests, temperament, and future direction. This is not a simple level test; it reads the student's blocks and growth patterns.",
+    design:
+      "Build a customized growth path such as weakness support, strength extension, career exploration, or project completion.",
+    train:
+      "Practice reading, writing, speaking, research, creation, debate, and projects repeatedly. The key is that students think and produce for themselves.",
+    feedback:
+      "Observe outputs, attitude, thinking process, language, presentation, and collaboration, then provide concrete feedback. Parents receive growth-direction reports.",
+    prove:
+      "Make growth visible through essays, presentations, research, coding apps, portfolios, camp showcases, and the next roadmap.",
+  };
+
+  DF.growthModel.forEach((step) => {
+    step.bodyEn = modelBodyEn[step.id];
+  });
+
+  const modeText = {
+    regular: [
+      "Regular Program",
+      "One to two sessions per week. Reading, writing, speech, book club, coding, and FutureLab are combined by level and goal.",
+    ],
+    project: [
+      "Project Mode",
+      "Four-, six-, or eight-week cycles from topic selection to research, production, presentation, and feedback.",
+    ],
+    camp: [
+      "Camp Mode",
+      "Intensive vacation or special-period programs with clear goals and outputs for short-term results.",
+    ],
+    counseling: [
+      "Consultation Mode",
+      "Diagnosis, parent consultation, future roadmaps, and home connection. Impact grows when connected to regular classes.",
+    ],
+    teacher: [
+      "Teacher Growth",
+      "Class observation, case meetings, feedback practice, and rubric development standardize education quality.",
+    ],
+  };
+
+  DF.operatingModes.forEach((mode) => {
+    const text = modeText[mode.id];
+    if (!text) return;
+    mode.titleEn = text[0];
+    mode.bodyEn = text[1];
+  });
+})();
