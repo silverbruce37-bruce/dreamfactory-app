@@ -792,7 +792,7 @@
     },
     p16: {
       overview:
-        "The core iCAN G1–G3 routine: Read → Picture → Tell → Write. Students draw the scene they read, tell it as a story, then write it. This is not vocabulary memorization — children narrate what they saw in their own language and describe it with sensory detail. Korea online and Ortigas classrooms use the same routine.",
+        "The core iCAN bilingual G1–G3 routine: Read → Picture → Tell → Write. Students draw the scene they read, tell it as a story, then write it. This is not vocabulary memorization — children narrate what they saw in their own language and describe it with sensory detail. Korea online and Ortigas classrooms use the same routine.",
       goals: [
         "Tell and write a story with a beginning, middle, and end.",
         "Make characters, places, and feelings visible with sensory detail.",
@@ -831,7 +831,7 @@
     },
     p17: {
       overview:
-        "The core iCAN G4–G6 and teen routine: Explain → Argue. Students unpack concepts with schema, claim with evidence, and revise after counterargument. The goal is explainable thinking, not surface fluency. School performance tasks, essays, and debates become the practice field.",
+        "The core iCAN bilingual G4–G6 and teen routine: Explain → Argue. Students unpack concepts with schema, claim with evidence, and revise after counterargument. The goal is explainable thinking, not surface fluency. School performance tasks, essays, and debates become the practice field.",
       goals: [
         "Organize a concept as a schema and re-explain it to someone else.",
         "Complete one argument in speech and writing with claim, evidence, example, and counterargument.",
