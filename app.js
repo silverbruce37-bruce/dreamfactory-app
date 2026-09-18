@@ -19,7 +19,7 @@
     ko: {
       docTitle: "드림팩토리 · Dream Factory Growth Programs",
       description:
-        "드림팩토리 통합 성장 프로그램 — AI 학습력, 글로벌 언어, 창의 프로젝트, 인성, 진로 로드맵을 한 시스템으로.",
+        "드림팩토리 통합 성장 프로그램 — 아이캔 이중언어, AI 학습력, 글로벌 언어, 창의 프로젝트, 인성, 진로 로드맵을 한 시스템으로.",
       brandName: "드림팩토리",
       brandSub: "Dream Factory Growth Programs",
       navLabel: "주요 메뉴",
@@ -27,6 +27,7 @@
         programs: "프로그램",
         model: "성장 모델",
         audience: "대상별",
+        ican: "이중언어",
         eduspace: "우주인",
         kit: "꺼내쓰기",
         metrics: "성과",
@@ -57,7 +58,7 @@
         panelLabel: "하나의 시스템",
         panelTitle: "진단 → 설계 → 훈련 → 피드백 → 증명",
         panelBody:
-          "프로그램은 독립 과목이 아닙니다. 리딩·라이팅이 발표로, 북클럽이 리서치로, 리서치가 코딩·창의 프로젝트로 이어지고, FutureLab과 해외 인큐베이팅이 진로·시장 로드맵으로 정리합니다.",
+          "프로그램은 독립 과목이 아닙니다. 아이캔 진단이 서술·묘사와 설명·논증으로, 인풋코어가 발표와 글로벌 보이스로 이어집니다. 리딩·라이팅·북클럽·코딩·FutureLab·해외 인큐베이팅이 한 성장 여정으로 정리됩니다.",
         statPrograms: "성장 프로그램",
         statSteps: "성장 단계",
         statMetrics: "성과 축",
@@ -79,6 +80,9 @@
         kitPanelTitle: "내 키트",
         presetTitle: "추천 키트",
         priorityTitle: "실행 우선순위",
+        icanTitle: "아이캔 이중언어 성장 경로",
+        icanSubtitle:
+          "대한민국에서 드림팩토리로 아이캔을 이용하는 아이·틴·청년을 위한 경로. 씨앗 서술가 → 다리 논증가 → 글로벌 보이스.",
         eduspaceTitle: "에듀스페이스 우주인 성장 경로",
         eduspaceSubtitle:
           "예비우주인 기초 → 항성여행자 → 에듀스페이스 우주인. 경험치(XP)에 따라 명예마크를 답니다.",
@@ -154,7 +158,7 @@
     en: {
       docTitle: "DreamFactory · Growth Programs",
       description:
-        "DreamFactory Growth Programs connect AI learning, global language, creative projects, character, and future roadmaps in one system.",
+        "DreamFactory Growth Programs connect iCAN bilingual thinking, AI learning, global language, creative projects, character, and future roadmaps in one system.",
       brandName: "DreamFactory",
       brandSub: "Growth Programs",
       navLabel: "Primary navigation",
@@ -162,6 +166,7 @@
         programs: "Programs",
         model: "Growth Model",
         audience: "By Age",
+        ican: "Bilingual",
         eduspace: "Astronaut",
         kit: "Use Kit",
         metrics: "Outcomes",
@@ -193,7 +198,7 @@
         panelLabel: "One connected system",
         panelTitle: "Diagnose → Design → Train → Feedback → Prove",
         panelBody:
-          "Programs are not isolated classes. Reading and writing lead to presentations, book clubs lead to research, research leads to coding and creative projects, and FutureLab plus overseas incubating turn the journey into a market and career roadmap.",
+          "Programs are not isolated classes. iCAN placement leads to narrative, description, explanation, and argument; Input Core feeds talks and Global Voice. Reading, writing, book club, coding, FutureLab, and overseas incubating become one growth journey.",
         statPrograms: "Growth programs",
         statSteps: "Growth steps",
         statMetrics: "Outcome axes",
@@ -204,6 +209,7 @@
           "DreamFactory reads each student's present and designs the next step.",
           "An integrated program for knowledge, language, creativity, and character.",
           "Where learning becomes evidence, and evidence becomes vision.",
+          "iCAN bilingual thinking: prove it in thought, speech, and writing — not conversation drills.",
         ],
       },
       sections: {
@@ -221,6 +227,9 @@
         kitPanelTitle: "My Kit",
         presetTitle: "Recommended Kits",
         priorityTitle: "Execution Priorities",
+        icanTitle: "iCAN Bilingual Growth Path",
+        icanSubtitle:
+          "For children, teens, and young adults in Korea who use iCAN through Dream Factory. Seed Narrator → Bridge Thinker → Global Voice.",
         eduspaceTitle: "EduSpace Astronaut Growth Path",
         eduspaceSubtitle:
           "Space Cadet foundations → Stellar Traveler → EduSpace Astronaut. Earn honor marks by XP.",
@@ -295,6 +304,8 @@
       priorities: [
         "Program introduction pages for the website and app",
         "A one-screen card catalog of growth programs",
+        "Korea iCAN bilingual path: placement → narrative/description → explain/argue → Global Voice",
+        "Priority launch of the youth (study/work/civic) track and Korea home-immersion kit",
         "Operate the Cadet → Stellar Traveler → EduSpace Astronaut path",
         "Priority launch of the Overseas Local AX × English Startup Incubating Kit",
         "A diagnostic and consultation flow before enrollment",
@@ -542,6 +553,10 @@
         "International School Prep Camp",
         "TOEFL and MAP Intensive Camp",
         "Portfolio Completion Camp",
+        "iCAN Narrative & Description Camp",
+        "iCAN Explain & Argue Camp",
+        "Youth Global Voice Camp",
+        "Ortigas Immersion Bridge Camp",
       ],
     },
     p11: {
@@ -735,6 +750,245 @@
         "Demo Day: Pitch in English",
       ],
     },
+    p15: {
+      overview:
+        "Not a conversation-score or CEFR-only academy test. iCAN looks at whether a learner can retell what they read as a scene, an explanation, and an evidence-based claim. We overlap learning persona with English MAP (grammar, reading, vocabulary, listening, writing) to place Seed Narrator, Bridge Thinker, or Global Voice. This is the entry for every age in Korea who starts iCAN through Dream Factory.",
+      goals: [
+        "Read learning style and blocks as a persona that justifies placement.",
+        "Read gaps across MAP’s five areas and the five articulation modes (narrate, describe, explain, argue, persuade).",
+        "Choose a starting track: G1–3 narrative/description, G4–6 explain/argue, or teen/youth Global Voice.",
+        "Confirm operating form — online, Ortigas local, or camp — in consultation.",
+        "Honestly filter poor-fit goals (conversation-only or short-term scores only).",
+      ],
+      activities: [
+        "Unified application → student ID and test level",
+        "Learning-type / persona interview",
+        "English MAP five-area diagnosis",
+        "Mini articulation interview (narrate, describe, explain, argue, persuade)",
+        "Retell-as-scene / explain / argue task",
+        "Goal alignment with parent or self (school, study abroad, job, confidence)",
+        "Placement report linked to curriculum",
+        "Six-step enrollment: apply → ID → persona+MAP → consult → schedule → class+feedback",
+      ],
+      outcomes: [
+        "Learning-type / persona card",
+        "English MAP profile",
+        "Five-mode articulation snapshot",
+        "Starting-track placement (Seed / Bridge / Voice)",
+        "Online / local / camp operating recommendation",
+        "One-page growth questions for parents or the learner",
+      ],
+      levels: {
+        beginner: "Short scene retell, listening/vocab gap check, Seed Narrator candidate",
+        intermediate: "Explainer paragraph and MAP-gap reading, Bridge Thinker candidate",
+        advanced: "Argument/persuasion sample aligned to career goals, Global Voice candidate",
+      },
+      campExamples: [
+        "Free Bilingual Placement Week",
+        "MAP + Persona Reading Lab",
+        "Family Placement Conference",
+        "Teen/Youth Voice Audit",
+      ],
+    },
+    p16: {
+      overview:
+        "The core iCAN bilingual G1–G3 routine: Read → Picture → Tell → Write. Students draw the scene they read, tell it as a story, then write it. This is not vocabulary memorization — children narrate what they saw in their own language and describe it with sensory detail. Korea online and Ortigas classrooms use the same routine.",
+      goals: [
+        "Tell and write a story with a beginning, middle, and end.",
+        "Make characters, places, and feelings visible with sensory detail.",
+        "Rebuild a reading as a drawing and oral story before writing.",
+        "Rethink a Korean story in English and retell an English story in Korean.",
+        "Leave four Seed Narrator portfolio pieces.",
+      ],
+      activities: [
+        "Weekly Read–Picture–Tell–Write cycle",
+        "Scene sketches and captions",
+        "Story sequence cards",
+        "Five-senses description games",
+        "Character feeling and motive talk",
+        "Short narrative writing and read-aloud",
+        "Korean–English restatement (not translation)",
+        "15-minute home scene missions",
+      ],
+      outcomes: [
+        "Scene drawing + caption set",
+        "Oral story recording",
+        "Narrative writing portfolio",
+        "Description sentence notes",
+        "Seed Narrator clearance checklist",
+      ],
+      levels: {
+        beginner: "One scene, three sentences, one drawing, 30-second talk",
+        intermediate: "Beginning–middle–end, sensory detail, 1-minute story, short paragraph",
+        advanced: "Character emotion shift, bilingual restatement, 2-minute story, one narrative+description piece",
+      },
+      campExamples: [
+        "Picture-Tell-Write Camp (1 week)",
+        "Story Scene Maker Week",
+        "Family Story Night",
+        "Ortigas Narrative Immersion",
+      ],
+    },
+    p17: {
+      overview:
+        "The core iCAN bilingual G4–G6 and teen routine: Explain → Argue. Students unpack concepts with schema, claim with evidence, and revise after counterargument. The goal is explainable thinking, not surface fluency. School performance tasks, essays, and debates become the practice field.",
+      goals: [
+        "Organize a concept as a schema and re-explain it to someone else.",
+        "Complete one argument in speech and writing with claim, evidence, example, and counterargument.",
+        "Restructure English sources in Korean and Korean thinking in English.",
+        "Judge source and evidence quality.",
+        "Leave explainers, arguments, and a 3-minute briefing for Bridge Thinker clearance.",
+      ],
+      activities: [
+        "Schema maps (definition–example–analogy–limit)",
+        "Explain paragraphs and peer re-explanation",
+        "Claim–evidence card debates",
+        "Anticipate rebuttal and reply",
+        "Research notes and source tables",
+        "Korean–English thinking-switch workshops",
+        "3-minute briefing and Q&A",
+        "Rebuild school essays with the argument rubric",
+      ],
+      outcomes: [
+        "Concept schema maps",
+        "Two explainer pieces",
+        "Two argument pieces",
+        "Debate prep notes",
+        "3-minute briefing video or script",
+        "Bridge Thinker clearance portfolio",
+      ],
+      levels: {
+        beginner: "One concept explainer, three evidence sentences, 60-second explanation",
+        intermediate: "Compare/cause explainer, one counter-line, argument paragraph, 3-minute briefing",
+        advanced: "Sourced argument essay, Q&A, bilingual restructure, school-task link",
+      },
+      campExamples: [
+        "Explain & Argue Sprint (2 weeks)",
+        "Evidence Debate Week",
+        "School Essay Rebuild Lab",
+        "Ortigas Argument Immersion",
+      ],
+    },
+    p18: {
+      overview:
+        "The shared input axis for every age: Reading → Vocabulary → Schema → Output Link. Listening more does not make a bilingual thinker. Students pin what they read to vocabulary and schema, then prove it the same day with spoken or written output. This is the daily engine for learners in Korea who lack English input.",
+      goals: [
+        "Keep a steady stream of level-right reading.",
+        "Retrieve vocabulary inside sentences and schema, not as isolated lists.",
+        "Leave a diagram of the reading’s structure.",
+        "Prove the same day’s input with a short spoken or written output.",
+        "Feed the age track (narrative, argument, or voice).",
+      ],
+      activities: [
+        "Leveled reading logs (literature and nonfiction)",
+        "Vocab card → sentence → schema link",
+        "Listening notes (meaning sketches, not dictation)",
+        "One-page schema",
+        "Output Link: 30-second talk or five sentences",
+        "Korean–English key-sentence pairing",
+        "Weekly input review (what can I re-explain?)",
+        "Youth track: papers, news, and workplace documents",
+      ],
+      outcomes: [
+        "Weekly Input Core log",
+        "Vocabulary–schema notes",
+        "Output Link collection",
+        "Reading growth snapshot",
+        "Track-connection checklist",
+      ],
+      levels: {
+        beginner: "Short text, five key words, picture schema, one-sentence output",
+        intermediate: "Paragraph reading, vocab network, cause-effect schema, five-sentence output",
+        advanced: "Long nonfiction, academic/workplace vocab, multi-schema, 1-minute re-explanation",
+      },
+      campExamples: [
+        "Input Core Reset (1 week)",
+        "Reading-to-Output Bootcamp",
+        "Youth News & Paper Lab",
+      ],
+    },
+    p19: {
+      overview:
+        "The missing teen and young-adult extension of iCAN. Learners who have trained narrative and argument move into persuasion, leadership, and real-life language. They leave TED-style talks, study-abroad essays, job interviews, academic seminars, and civic or content pieces in Korean and English. This is not more English class — it is using thinking already built.",
+      goals: [
+        "Persuade an audience with one claim and handle questions.",
+        "Design study-abroad, scholarship, or job documents and interview stories independently.",
+        "Hold Korean identity and English thinking in the same portfolio.",
+        "Use AI only as a draft tool; keep explanation, evidence, and voice as the learner’s.",
+        "Leave a Global Voice mark and a 12-week next roadmap.",
+      ],
+      activities: [
+        "Choose a voice genre (academic / job / venture / content / civic)",
+        "TED-style speech structure (hook–story–claim–ask)",
+        "Study-abroad and personal-statement workshop",
+        "Interview story bank (failure, collaboration, conflict, learning)",
+        "Seminar summary and questioning practice",
+        "One bilingual content piece (essay, video, or newsletter)",
+        "Bilingual identity statement",
+        "Peer Q&A and rubric feedback",
+      ],
+      outcomes: [
+        "TED/pitch script and recording",
+        "One study-abroad or job essay",
+        "Interview story bank",
+        "Bilingual content or seminar notes",
+        "Bilingual identity statement",
+        "Global Voice portfolio",
+        "Next 12-week roadmap",
+      ],
+      levels: {
+        beginner: "2-minute self-story, three interview answers, one-page essay",
+        intermediate: "5-minute TED, essay revision, mock interview, bilingual content draft",
+        advanced: "Talk with Q&A, application package, mentoring, career-linked portfolio",
+      },
+      campExamples: [
+        "Global Voice Bootcamp (2 weeks)",
+        "College & Career Essay Lab",
+        "Interview Story Week",
+        "TED Night: Speak in Two Languages",
+        "Youth Ortigas Immersion",
+      ],
+    },
+    p20: {
+      overview:
+        "An operating program for Korean homes where English is not the daily language. Parents do not need to be native speakers. They move iCAN routines — short input, scene or explainer output, feedback — into 15-minute home slots, and put weekday Korea-online work on one calendar with vacation Ortigas camps. The rule is to grow English thinking without dropping Korean literacy or identity.",
+      goals: [
+        "Keep a short daily bilingual routine even without an English environment.",
+        "Help parents become questioners, audiences, and recorders — not answer-teachers.",
+        "Pair English output with Korean reading and conversation instead of replacing them.",
+        "Turn screen time into Input Core with a clear rule.",
+        "Show online regular work and Ortigas local/camp roles on one calendar.",
+      ],
+      activities: [
+        "15-minute home mission cards (draw, retell, one sentence)",
+        "Parent question lists (ask again; do not correct first)",
+        "One evening scene shared in Korean and English",
+        "Sibling or peer re-explanation games",
+        "Screen = input, output = speech or writing",
+        "Monthly growth comments (the scene retold, not a score)",
+        "Weekly online ↔ Ortigas intensive bridge plan",
+        "Pair a Korean book and an English book on the same theme",
+      ],
+      outcomes: [
+        "Home immersion calendar",
+        "15-minute mission log",
+        "Parent question cards",
+        "Paired Korean–English theme reading record",
+        "Yearly online+camp bridge map",
+        "Monthly home growth comments",
+      ],
+      levels: {
+        beginner: "Four 15-minute sessions a week; parent only listens; one drawing",
+        intermediate: "Five sessions; two parent questions; one Korean and one English sentence",
+        advanced: "The teen runs their own routine; parent reviews the portfolio monthly",
+      },
+      campExamples: [
+        "Korea Home Kickoff Saturday",
+        "Parent Question Workshop",
+        "Online-to-Ortigas Bridge Week",
+        "Family Bilingual Night",
+      ],
+    },
   };
 
   const state = {
@@ -862,10 +1116,13 @@
     return DF.eduspacePath || null;
   }
 
+  function getIcanPath() {
+    return DF.icanPath || null;
+  }
+
   function honorMarkById(id) {
-    const path = getEduspacePath();
-    if (!path) return null;
-    return (path.honorMarks || []).find((m) => m.id === id) || null;
+    const marks = [...(DF.eduspacePath?.honorMarks || []), ...(DF.icanPath?.honorMarks || [])];
+    return marks.find((m) => m.id === id) || null;
   }
 
   function buildPresetBrief(preset) {
@@ -1110,6 +1367,7 @@
     setText("#navPrograms", t().nav.programs);
     setText("#navModel", t().nav.model);
     setText("#navAudience", t().nav.audience);
+    setText("#navIcan", t().nav.ican);
     setText("#navEduspace", t().nav.eduspace);
     setText("#navKit", t().nav.kit);
     setText("#navMetrics", t().nav.metrics);
@@ -1132,6 +1390,8 @@
     setText("#kitPanelTitle", t().sections.kitPanelTitle);
     setText("#presetTitle", t().sections.presetTitle);
     setText("#priorityTitle", t().sections.priorityTitle);
+    setText("#icanTitle", t().sections.icanTitle);
+    setText("#icanSubtitle", t().sections.icanSubtitle);
     setText("#eduspaceTitle", t().sections.eduspaceTitle);
     setText("#eduspaceSubtitle", t().sections.eduspaceSubtitle);
 
@@ -1248,6 +1508,9 @@
         if (p.priority) badges.push(`<span class="badge flag">${escapeHtml(t().labels.priority)}</span>`);
         if (p.internal) badges.push(`<span class="badge internal">${escapeHtml(t().labels.internal)}</span>`);
         if (p.category === "flagship") badges.push('<span class="badge flag">Flagship</span>');
+        if (p.icanRank || (p.kitBundleId && String(p.kitBundleId).startsWith("kit-ican")) || ["p15", "p16", "p17", "p18", "p19", "p20"].includes(p.id)) {
+          badges.push('<span class="badge ican">iCAN</span>');
+        }
         const title = state.lang === "en" ? p.titleEn : p.titleKo;
         const subtitle = state.lang === "en" ? p.titleKo : p.titleEn;
 
@@ -1354,10 +1617,10 @@
           .join("");
         const featured = kit.featured ? `<span class="badge flag">${escapeHtml(t().labels.priority)}</span>` : "";
         const allLoaded = (kit.programIds || []).every((id) => isInKit(id));
-        const spaceClass = kit.pathId === "eduspace" ? " space" : "";
+        const pathClass = kit.pathId === "eduspace" ? " space" : kit.pathId === "ican" ? " bilingual" : "";
 
         return `
-          <article class="preset-card${kit.featured ? " featured" : ""}${spaceClass}" data-preset="${kit.id}">
+          <article class="preset-card${kit.featured ? " featured" : ""}${pathClass}" data-preset="${kit.id}">
             <div class="preset-head">
               <span class="preset-icon" aria-hidden="true">${kit.icon}</span>
               <div>
@@ -1385,10 +1648,8 @@
       .join("");
   }
 
-  function renderEduspacePath() {
-    const root = $("#eduspaceRoot");
+  function renderGrowthPath(root, path) {
     if (!root) return;
-    const path = getEduspacePath();
     const isEn = state.lang === "en";
     if (!path) {
       root.innerHTML = "";
@@ -1460,6 +1721,14 @@
       <h3 class="eduspace-h3">${escapeHtml(t().sections.xpTitle)}</h3>
       <ul class="xp-list">${xpHtml}</ul>
     `;
+  }
+
+  function renderEduspacePath() {
+    renderGrowthPath($("#eduspaceRoot"), getEduspacePath());
+  }
+
+  function renderIcanPath() {
+    renderGrowthPath($("#icanRoot"), getIcanPath());
   }
 
   /* ── Drawer ── */
@@ -1625,6 +1894,7 @@
     };
     $("#presetKitList")?.addEventListener("click", onPresetClick);
     $("#eduspaceRoot")?.addEventListener("click", onPresetClick);
+    $("#icanRoot")?.addEventListener("click", onPresetClick);
 
     $("#drawerClose").addEventListener("click", closeDrawer);
     $("#drawerBackdrop").addEventListener("click", closeDrawer);
@@ -1655,6 +1925,7 @@
     renderKit();
     renderPresetKits();
     renderEduspacePath();
+    renderIcanPath();
     if (state.activeProgramId) openDrawer(state.activeProgramId);
   }
 
