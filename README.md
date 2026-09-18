@@ -49,7 +49,7 @@ vercel deploy --prod --yes
 
 ## 기능
 
-1. **10개 프로그램 카드** — 한 화면 카탈로그
+1. **프로그램 카드** — 한 화면 카탈로그 (아이캔 이중언어 트랙 포함)
 2. **상세 드로어** — 개요, 목표, 주요 내용, 결과물, 수준별·캠프 예시
 3. **필터** — 대상(초등 저/고, 중, 고), 경로 유형(약점 보완·강점 확장·진로 탐색·프로젝트 완성), 검색
 4. **성장 키트** — 프로그램을 담아 두고, 브리프를 클립보드에 복사 (localStorage)
@@ -71,8 +71,39 @@ vercel deploy --prod --yes
 12. Overseas Local AX × English Startup Incubator *(대표 · 해외 시장)*  
 13. Space Cadet Foundations *(대표 · 예비우주인)*  
 14. Stellar Traveler · EduSpace Astronaut *(대표 · 항성여행자/우주인)*  
+15. iCAN Bilingual Placement Studio *(대표 · 이중언어 진단)*  
+16. iCAN Narrative & Description Track *(대표 · G1–3 서술묘사)*  
+17. iCAN Explain & Argue Track *(대표 · G4–6·틴 설명논증)*  
+18. iCAN Input Core *(인풋코어)*  
+19. iCAN Teen & Youth Global Voice *(대표 · 틴·청년)*  
+20. iCAN Korea Home Bilingual Partnership *(한국 가정 이머전)*  
+
+### 아이캔 이중언어 진급 (XP)
+
+대한민국에서 드림팩토리를 통해 아이캔을 이용하는 아이·틴에이저·청년을 위한 경로입니다. 회화·입시가 아니라 **읽고 생각하고 서술·논증·설득으로 증명**합니다.
+
+| 단계 | XP | 의미 |
+|------|-----|------|
+| 씨앗 서술가 | 0–99 | G1–3 Read–Picture–Tell–Write |
+| 다리 논증가 | 100–299 | G4–6·틴 Explain–Argue |
+| 글로벌 보이스 | 300+ | 틴·청년 설득·TED·실전 언어 |
+
+조음력 명예마크: 서술 → 묘사 → 설명 → 논증 → 설득·TED
 
 ### 추천 키트
+
+- **아이캔 키즈 이중언어 키트** (`kit-ican-kids`)  
+  - 포함: p15 + p16 + p18 + Global R&W + Speech + 한국 가정 파트너십  
+  - 단계: 진단 → 인풋코어 → 장면 그리기·말하기 → 서술·묘사 쓰기 → 가정 미션 증명  
+  - 명예마크: 서술 → 묘사  
+- **아이캔 틴 이중언어 키트** (`kit-ican-teen`)  
+  - 포함: p15 + p17 + p18 + p19 + Global R&W + Speech  
+  - 단계: 재진단 → 스키마 설명 → 근거 논증 → 사고 전환 → 3분 브리핑  
+  - 명예마크: 설명 → 논증  
+- **아이캔 청년 글로벌 보이스 키트** (`kit-ican-youth`)  
+  - 포함: p15 + p18 + p19 + Speech + FutureLab + 해외 인큐베이팅  
+  - 단계: 보이스 진단 → 학술·직장 언어 → 설득 퍼포먼스 → 진로 연결 → 포트폴리오  
+  - 명예마크: 논증 → 설득·TED  
 
 - **예비우주인 기초 학습 키트** (`kit-eduspace-cadet`)  
   - 포함: p13 + AI Learning Lab + Global R&W + Book Club + Coding  
@@ -102,10 +133,11 @@ vercel deploy --prod --yes
 ## 다음 단계 (기획 실행 우선순위)
 
 1. 홈페이지/포털에 이 앱 링크 연결  
-2. 진단·상담 플로우와 신청 전 단계 연결  
-3. 학부모용 성장 리포트 샘플 추가  
-4. FutureLab · 방학 캠프 운영 템플릿 심화  
-5. 교사 품질 관리 매뉴얼 연동  
+2. 아이캔 이중언어 진단(레벨테스트)과 드림팩토리 배치 연결  
+3. 진단·상담 플로우와 신청 전 단계 연결  
+4. 학부모용 성장 리포트 샘플 추가  
+5. FutureLab · 방학 캠프 운영 템플릿 심화  
+6. 교사 품질 관리 매뉴얼 연동   
 
 ## 슬로건
 

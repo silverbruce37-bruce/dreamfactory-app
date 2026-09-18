@@ -672,6 +672,11 @@ a {
   color: #3f6212;
 }
 
+.badge.ican {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
 .program-card h3 {
   margin: 0 0 4px;
   font-size: 1.05rem;
@@ -875,9 +880,31 @@ a {
   border-color: rgba(226, 232, 240, 0.28);
 }
 
+.preset-card.bilingual {
+  background: linear-gradient(165deg, #fffdf8 0%, #f3faf8 55%, #eef6f4 100%);
+  border-color: rgba(15, 118, 110, 0.28);
+}
+
+.preset-card.bilingual .preset-sub {
+  color: var(--teal);
+}
+
+.preset-card.bilingual .preset-chip.honor {
+  background: rgba(184, 134, 11, 0.14);
+  color: #92400e;
+}
+
 .preset-chip.honor {
   background: rgba(124, 58, 237, 0.1);
   color: #6d28d9;
+}
+
+/* iCAN bilingual path */
+.ican-section {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(15, 118, 110, 0.1), transparent 52%),
+    radial-gradient(ellipse at 88% 16%, rgba(184, 134, 11, 0.1), transparent 46%),
+    var(--surface);
 }
 
 /* EduSpace path */
