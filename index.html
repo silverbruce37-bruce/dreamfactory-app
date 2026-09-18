@@ -25,6 +25,7 @@
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#programs" id="navPrograms">프로그램</a>
         <a href="#model" id="navModel">성장 모델</a>
+        <a href="#ops" id="navOps">상담</a>
         <a href="#audience" id="navAudience">대상별</a>
         <a href="#eduspace" id="navEduspace">우주인</a>
         <a href="#kit" id="navKit">꺼내쓰기</a>
@@ -52,8 +53,9 @@
             성장하도록 돕는 성장 공장입니다.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#programs">10개 프로그램 보기</a>
-            <a class="button" href="#kit">필요할 때 꺼내 쓰기</a>
+            <a class="button primary" href="#programs" id="heroProgramsBtn">프로그램 보기</a>
+            <a class="button" href="#ops" id="heroConsultBtn">진단·상담 시작</a>
+            <a class="button" href="#kit" id="heroKitBtn">필요할 때 꺼내 쓰기</a>
           </div>
           <ul class="slogan-row" id="sloganRow" aria-label="핵심 슬로건"></ul>
         </div>
@@ -82,10 +84,24 @@
         <ol class="model-track" id="modelTrack"></ol>
       </section>
 
+      <section class="section muted" id="ops" aria-labelledby="opsTitle">
+        <div class="section-head">
+          <p class="eyebrow">Consult Desk</p>
+          <h2 id="opsTitle">진단 · 상담 · 리포트</h2>
+          <p id="opsSubtitle">
+            신청 전 상담에서 대상·경로·관심 테마를 고르면 추천 프로그램과 학부모 성장 리포트 샘플이 만들어집니다.
+          </p>
+        </div>
+        <div class="ops-layout">
+          <div class="kit-panel ops-form" id="opsForm"></div>
+          <div class="ops-result" id="opsResult"></div>
+        </div>
+      </section>
+
       <section class="section filters-bar" id="programs" aria-labelledby="programsTitle">
         <div class="section-head">
           <p class="eyebrow">Program Catalog</p>
-          <h2 id="programsTitle">10개 프로그램 · 카드형 카탈로그</h2>
+          <h2 id="programsTitle">프로그램 · 카드형 카탈로그</h2>
           <p id="programsSubtitle">카드를 눌러 상세를 보고, 키트에 담아 필요할 때 꺼내 쓰세요.</p>
         </div>
 

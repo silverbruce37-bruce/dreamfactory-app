@@ -137,14 +137,13 @@ window.DREAM_FACTORY = {
   ],
 
   priorities: [
-    "홈페이지·앱 프로그램 소개 페이지",
-    "프로그램 카드형 한 화면 정리",
+    "상담 데스크에서 진단 → 추천 키트 → 학부모 리포트 복사",
+    "FutureLab 6주 · 방학 캠프 5일 템플릿으로 수업 설계",
+    "교사 품질 체크리스트로 수업 관찰·피드백",
     "예비우주인 → 항성여행자 → 에듀스페이스 우주인 경로 운영",
-    "해외 로컬시장 인큐베이팅 키트(Ax + 영어 스타트업) 우선 운영",
-    "신청 전 진단·상담 흐름 연결",
-    "학부모용 성장 리포트 샘플",
-    "방학 캠프 + FutureLab 대표 상품 우선 운영",
-    "교사 훈련·품질 관리 내부 매뉴얼",
+    "해외 로컬시장 인큐베이팅 키트 우선 운영",
+    "홈페이지·포털에 이 앱 링크 연결",
+    "실제 신청·학생 기록 시스템과 연동 (다음 단계)",
   ],
 
   /**
@@ -466,7 +465,322 @@ window.DREAM_FACTORY = {
     },
   ],
 
-
+  /**
+   * Consult desk: pre-enrollment diagnosis → recommended kit → parent report + ops templates.
+   * Used by counselors during intake; copy/paste into chat or consultation notes.
+   */
+  opsDesk: {
+    themes: [
+      {
+        id: "ai",
+        icon: "🤖",
+        labelKo: "AI·학습력",
+        labelEn: "AI & learning",
+        programIds: ["p1", "p11"],
+      },
+      {
+        id: "language",
+        icon: "📖",
+        labelKo: "영어·표현",
+        labelEn: "English & expression",
+        programIds: ["p2", "p3", "p4"],
+      },
+      {
+        id: "coding",
+        icon: "💻",
+        labelKo: "코딩·제작",
+        labelEn: "Coding & making",
+        programIds: ["p5", "p11"],
+      },
+      {
+        id: "career",
+        icon: "🗺️",
+        labelKo: "진로·로드맵",
+        labelEn: "Career & roadmap",
+        programIds: ["p6"],
+      },
+      {
+        id: "space",
+        icon: "🚀",
+        labelKo: "우주·에듀스페이스",
+        labelEn: "Space · EduSpace",
+        programIds: ["p13", "p14"],
+        kitIdByAudience: {
+          "elem-lower": "kit-eduspace-cadet",
+          "elem-upper": "kit-eduspace-cadet",
+          middle: "kit-eduspace-traveler",
+          high: "kit-eduspace-traveler",
+        },
+      },
+      {
+        id: "overseas",
+        icon: "🌍",
+        labelKo: "해외 시장",
+        labelEn: "Overseas market",
+        programIds: ["p12"],
+        kitId: "kit-overseas-ax-startup",
+      },
+      {
+        id: "faith",
+        icon: "✝️",
+        labelKo: "인성·리더십",
+        labelEn: "Character & leadership",
+        programIds: ["p7", "p8"],
+      },
+      {
+        id: "school",
+        icon: "📚",
+        labelKo: "숙제·학교 과제",
+        labelEn: "Homework & school tasks",
+        programIds: ["p11", "p1"],
+      },
+    ],
+    intents: [
+      {
+        id: "consult",
+        labelKo: "진단·상담",
+        labelEn: "Diagnosis & consult",
+        programIds: ["p6", "p8"],
+      },
+      {
+        id: "habit",
+        labelKo: "습관·기초",
+        labelEn: "Habits & foundations",
+        programIds: ["p1", "p2", "p8", "p11"],
+      },
+      {
+        id: "camp",
+        labelKo: "방학 캠프",
+        labelEn: "Vacation camp",
+        programIds: ["p10"],
+      },
+      {
+        id: "portfolio",
+        labelKo: "포트폴리오",
+        labelEn: "Portfolio",
+        programIds: ["p5", "p6", "p12", "p14"],
+      },
+      {
+        id: "teacher",
+        labelKo: "교사 품질",
+        labelEn: "Teacher quality",
+        programIds: ["p9"],
+        includeInternal: true,
+      },
+    ],
+    homeLinks: [
+      {
+        id: "home-read",
+        titleKo: "가정에서 관찰할 점",
+        titleEn: "What to watch at home",
+        itemsKo: [
+          "질문이 늘었는지, 막힌 지점을 스스로 말하는지",
+          "숙제·미션을 미루지 않고 계획표에 옮기는지",
+          "결과물을 가족에게 짧게 설명해 보는지",
+        ],
+        itemsEn: [
+          "Whether questions increase and the student can name where they get stuck",
+          "Whether homework and missions move onto a plan instead of being postponed",
+          "Whether the student can briefly explain an output to the family",
+        ],
+      },
+      {
+        id: "home-do",
+        titleKo: "가정 연계 한 가지",
+        titleEn: "One home link",
+        itemsKo: [
+          "주 1회 10분: 오늘 만든 질문 1개와 결과물 1개를 함께 본다",
+          "점수보다 ‘다음에 시도할 행동 한 줄’을 짧게 묻는다",
+          "영어·우주·코딩 중 관심 주제로 짧은 대화 기록을 남긴다",
+        ],
+        itemsEn: [
+          "Once a week for 10 minutes: review one question and one output together",
+          "Ask for the next action, not only the score",
+          "Keep a short conversation log on the theme the student chose (English, space, or coding)",
+        ],
+      },
+    ],
+    reportObservations: {
+      learning: {
+        ko: "자기주도 루틴이 막 시작되는 단계입니다. 계획·회고를 짧게라도 남기면 학습력이 보입니다.",
+        en: "A self-directed routine is just starting. Short plans and reflections will make learning power visible.",
+      },
+      language: {
+        ko: "읽기·쓰기·말하기를 시험 대비가 아니라 생각 표현 도구로 연결할 때입니다.",
+        en: "Reading, writing, and speaking should now become tools for expressing thought, not only test practice.",
+      },
+      thinking: {
+        ko: "비교·근거·질문을 한 줄씩 남기면 사고 과정이 포트폴리오가 됩니다.",
+        en: "One-line comparisons, evidence, and questions turn thinking into a portfolio.",
+      },
+      expression: {
+        ko: "발표 불안보다 ‘구조(주장-근거-다음 질문)’를 먼저 익히면 자신감이 따라옵니다.",
+        en: "Confidence follows once the student learns structure (claim–evidence–next question) before performance polish.",
+      },
+      creativity: {
+        ko: "콘텐츠를 소비하는 단계를 넘어, 작은 제작물 하나로 창의력을 증명할 수 있습니다.",
+        en: "Creativity becomes visible when the student makes one small artifact instead of only consuming content.",
+      },
+      character: {
+        ko: "책임·협업·섬김은 미션 역할과 피어 피드백에서 관찰합니다.",
+        en: "Responsibility, collaboration, and service show up in mission roles and peer feedback.",
+      },
+    },
+    templates: {
+      futurelab: {
+        id: "futurelab",
+        titleKo: "FutureLab 6주 운영 템플릿",
+        titleEn: "FutureLab 6-week operating template",
+        subtitleKo: "진단 → 로드맵 → 학부모 상담 → 포트폴리오",
+        subtitleEn: "Diagnose → roadmap → parent consult → portfolio",
+        durationKo: "주 1회 · 6주 (방학에는 2주 압축 가능)",
+        durationEn: "Once a week · 6 weeks (compressible to 2 weeks in vacation)",
+        weeks: [
+          {
+            step: 1,
+            titleKo: "현재 읽기",
+            titleEn: "Read the present",
+            bodyKo: "성향·습관·관심 인터뷰. 막히는 과목과 잘하는 표현 방식을 기록한다.",
+            bodyEn: "Interview temperament, habits, and interests. Record blocks and preferred ways of expressing.",
+          },
+          {
+            step: 2,
+            titleKo: "학습 프로필",
+            titleEn: "Learning profile",
+            bodyKo: "리딩·라이팅·스피킹·프로젝트 경험을 한 장으로 정리하고 성장 축 2개를 고른다.",
+            bodyEn: "Summarize reading, writing, speaking, and project experience on one page and pick two growth axes.",
+          },
+          {
+            step: 3,
+            titleKo: "진로 테마 탐색",
+            titleEn: "Explore career themes",
+            bodyKo: "관심 직업·사회 문제·우주/해외/AI 테마 중 하나를 골라 리서치 노트를 만든다.",
+            bodyEn: "Choose one theme (career, social issue, space, overseas, or AI) and start a research note.",
+          },
+          {
+            step: 4,
+            titleKo: "로드맵 초안",
+            titleEn: "Draft the roadmap",
+            bodyKo: "12주 행동(수업·가정·결과물)을 적고, 필요한 프로그램을 키트에 담는다.",
+            bodyEn: "Write a 12-week action list (class, home, outputs) and load the needed programs into a kit.",
+          },
+          {
+            step: 5,
+            titleKo: "학부모 상담",
+            titleEn: "Parent consultation",
+            bodyKo: "점수 대신 성장 방향·가정 연계 한 가지·다음 증명물을 공유한다.",
+            bodyEn: "Share growth direction, one home link, and the next proof — not only scores.",
+          },
+          {
+            step: 6,
+            titleKo: "비전 선언·포트폴리오",
+            titleEn: "Vision statement & portfolio",
+            bodyKo: "학생 언어로 비전 한 문장과 결과물 목록을 남기고 다음 키트를 예약한다.",
+            bodyEn: "Leave a one-sentence vision in the student's words, list outputs, and book the next kit.",
+          },
+        ],
+      },
+      camp: {
+        id: "camp",
+        titleKo: "방학 캠프 5일 운영 템플릿",
+        titleEn: "5-day vacation camp template",
+        subtitleKo: "목표 고정 → 매일 결과물 → 발표회",
+        subtitleEn: "Fix the goal → daily output → showcase",
+        durationKo: "5일 집중 · 오전 훈련 + 오후 제작 (2주 확장 가능)",
+        durationEn: "5-day intensive · morning training + afternoon making (extendable to 2 weeks)",
+        weeks: [
+          {
+            step: 1,
+            titleKo: "Day 1 목표·팀",
+            titleEn: "Day 1 Goal & team",
+            bodyKo: "캠프 성공 기준 1개, 역할, 결과물 형식을 학생과 합의한다.",
+            bodyEn: "Agree on one success criterion, roles, and the output format.",
+          },
+          {
+            step: 2,
+            titleKo: "Day 2 리서치·초안",
+            titleEn: "Day 2 Research & draft",
+            bodyKo: "자료 수집, 질문 리스트, 초안 스케치를 남긴다. 저녁에 피어 피드백 1회.",
+            bodyEn: "Collect sources, write questions, and sketch a draft. One peer-feedback round in the evening.",
+          },
+          {
+            step: 3,
+            titleKo: "Day 3 제작",
+            titleEn: "Day 3 Production",
+            bodyKo: "에세이·피치·코딩·모형 중 본 결과물을 60%까지 완성한다.",
+            bodyEn: "Push the main artifact (essay, pitch, code, or model) to about 60% complete.",
+          },
+          {
+            step: 4,
+            titleKo: "Day 4 피드백·수정",
+            titleEn: "Day 4 Feedback & revise",
+            bodyKo: "교사 루브릭 3항목으로 수정. 학부모용 한 줄 성장 메모를 초안한다.",
+            bodyEn: "Revise with a 3-item teacher rubric. Draft a one-line growth note for parents.",
+          },
+          {
+            step: 5,
+            titleKo: "Day 5 발표회·리포트",
+            titleEn: "Day 5 Showcase & report",
+            bodyKo: "발표·전시 후 캠프 성장 리포트와 다음 정규 키트를 연결한다.",
+            bodyEn: "After the showcase, write the camp growth report and connect the next regular kit.",
+          },
+        ],
+      },
+      teacher: {
+        id: "teacher",
+        titleKo: "교사 품질 체크리스트",
+        titleEn: "Teacher quality checklist",
+        subtitleKo: "수업 관찰 · 사례 회의 · 피드백 표준",
+        subtitleEn: "Observation · case meeting · feedback standard",
+        durationKo: "매 수업 후 5분 + 격주 사례 회의",
+        durationEn: "5 minutes after each class + biweekly case meeting",
+        weeks: [
+          {
+            step: 1,
+            titleKo: "목표와 결과물이 보이는가",
+            titleEn: "Are the goal and output visible?",
+            bodyKo: "학생이 ‘오늘 무엇을 남기는지’를 첫 5분에 말할 수 있어야 한다.",
+            bodyEn: "In the first five minutes, students should be able to say what they will leave behind today.",
+          },
+          {
+            step: 2,
+            titleKo: "학생 발화가 더 많은가",
+            titleEn: "Do students speak more than the teacher?",
+            bodyKo: "설명보다 질문·제작·발표 시간이 길어야 한다.",
+            bodyEn: "Questioning, making, and presenting should outlast teacher explanation.",
+          },
+          {
+            step: 3,
+            titleKo: "피드백이 다음 행동인가",
+            titleEn: "Is feedback the next action?",
+            bodyKo: "점수/잘했어 대신 ‘다음에 시도할 한 줄’을 적는다.",
+            bodyEn: "Write the next one-line attempt instead of only a score or ‘good job’.",
+          },
+          {
+            step: 4,
+            titleKo: "성장 6축 중 무엇을 봤는가",
+            titleEn: "Which of the six axes was observed?",
+            bodyKo: "수업마다 축 1개를 표시하고 근거(문장·행동·결과물)를 남긴다.",
+            bodyEn: "Mark one axis per class and keep evidence (sentence, behavior, or artifact).",
+          },
+          {
+            step: 5,
+            titleKo: "학부모 보고가 방향인가",
+            titleEn: "Does the parent note point to direction?",
+            bodyKo: "숙제 완료 여부가 아니라 성장 방향과 가정 연계 한 가지를 전한다.",
+            bodyEn: "Report growth direction and one home link, not only homework completion.",
+          },
+          {
+            step: 6,
+            titleKo: "루브릭이 공유되었는가",
+            titleEn: "Was the rubric shared?",
+            bodyKo: "학생·교사·학부모가 같은 3항목을 보게 한다.",
+            bodyEn: "Students, teachers, and parents should see the same three rubric items.",
+          },
+        ],
+      },
+    },
+  },
 
   programs: [
     {
