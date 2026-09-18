@@ -26,6 +26,7 @@
       nav: {
         programs: "프로그램",
         model: "성장 모델",
+        ops: "상담",
         audience: "대상별",
         eduspace: "우주인",
         kit: "꺼내쓰기",
@@ -36,6 +37,7 @@
         exportKitTitle: "선택한 프로그램 브리프 복사",
         openKit: "내 키트",
         heroPrograms: "프로그램 보기",
+        heroConsult: "진단·상담 시작",
         heroKit: "필요할 때 꺼내 쓰기",
         clearKit: "비우기",
         copyBrief: "브리프 복사",
@@ -87,6 +89,43 @@
         xpTitle: "경험치(XP) 적립 방법",
         unlock: "통과 조건",
         xpRequired: "필요 XP",
+        opsTitle: "진단 · 상담 · 리포트",
+        opsSubtitle:
+          "신청 전 상담에서 대상·경로·관심 테마를 고르면 추천 프로그램과 학부모 성장 리포트 샘플이 만들어집니다.",
+      },
+      ops: {
+        audience: "대상",
+        path: "경로 유형",
+        themes: "관심 테마 (여러 개)",
+        intent: "상담 목적",
+        recommendTitle: "추천 설계",
+        recommendEmpty: "대상이나 테마를 고르면 추천이 나타납니다.",
+        matchedKit: "맞는 추천 키트",
+        programs: "우선 연결 프로그램",
+        why: "상담 메모",
+        loadRecommend: "이 추천으로 키트 구성",
+        copyConsult: "상담 브리프 복사",
+        copyReport: "학부모 리포트 복사",
+        copyTemplate: "템플릿 복사",
+        openProgram: "상세",
+        tabs: {
+          report: "학부모 리포트",
+          futurelab: "FutureLab 6주",
+          camp: "방학 캠프 5일",
+          teacher: "교사 체크리스트",
+        },
+        reportTitle: "학부모 성장 리포트 샘플",
+        reportNote: "상담 직후 복사해 가정에 공유하는 샘플입니다. 실제 학생 이름은 상담에서 채워 주세요.",
+        studentLabel: "대상",
+        pathLabel: "경로",
+        themeLabel: "관심",
+        intentLabel: "목적",
+        diagnose: "현재 읽기 (진단)",
+        design: "다음 성장 설계",
+        axes: "성과 6축 관찰 샘플",
+        prove: "다음 4주 증명물",
+        next: "다음 한 걸음",
+        templateDuration: "운영 기간",
       },
       filters: {
         searchLabel: "검색",
@@ -149,7 +188,15 @@
         "<strong>드림팩토리</strong> — 학생의 가능성을 발견하고, 훈련하고, 표현하고, 미래를 준비하는 성장 공장",
       footerSub: "Team iCAN · 연합하여 선을 이루는 교육 공동체",
       definition: DF.meta.definition,
-      priorities: DF.priorities,
+      priorities: [
+        "상담 데스크에서 진단 → 추천 키트 → 학부모 리포트 복사",
+        "FutureLab 6주 · 방학 캠프 5일 템플릿으로 수업 설계",
+        "교사 품질 체크리스트로 수업 관찰·피드백",
+        "예비우주인 → 항성여행자 → 에듀스페이스 우주인 경로 운영",
+        "해외 로컬시장 인큐베이팅 키트 우선 운영",
+        "홈페이지·포털에 이 앱 링크 연결",
+        "실제 신청·학생 기록 시스템과 연동 (다음 단계)",
+      ],
     },
     en: {
       docTitle: "DreamFactory · Growth Programs",
@@ -161,6 +208,7 @@
       nav: {
         programs: "Programs",
         model: "Growth Model",
+        ops: "Consult",
         audience: "By Age",
         eduspace: "Astronaut",
         kit: "Use Kit",
@@ -171,6 +219,7 @@
         exportKitTitle: "Copy selected program brief",
         openKit: "My Kit",
         heroPrograms: "View programs",
+        heroConsult: "Start diagnosis",
         heroKit: "Use when needed",
         clearKit: "Clear",
         copyBrief: "Copy Brief",
@@ -229,6 +278,43 @@
         xpTitle: "How XP is earned",
         unlock: "Clearance requirements",
         xpRequired: "XP required",
+        opsTitle: "Diagnose · Consult · Report",
+        opsSubtitle:
+          "In a pre-enrollment consult, choose age, path, and themes to generate recommended programs and a sample parent growth report.",
+      },
+      ops: {
+        audience: "Age band",
+        path: "Path type",
+        themes: "Interest themes (multi-select)",
+        intent: "Consult purpose",
+        recommendTitle: "Recommended design",
+        recommendEmpty: "Choose an age band or theme to see recommendations.",
+        matchedKit: "Matching recommended kit",
+        programs: "Programs to connect first",
+        why: "Counselor note",
+        loadRecommend: "Build kit from this recommendation",
+        copyConsult: "Copy consult brief",
+        copyReport: "Copy parent report",
+        copyTemplate: "Copy template",
+        openProgram: "Details",
+        tabs: {
+          report: "Parent report",
+          futurelab: "FutureLab 6 weeks",
+          camp: "Camp 5 days",
+          teacher: "Teacher checklist",
+        },
+        reportTitle: "Sample parent growth report",
+        reportNote: "Copy after a consult to share with the family. Fill in the student's name during the meeting.",
+        studentLabel: "Age band",
+        pathLabel: "Path",
+        themeLabel: "Interests",
+        intentLabel: "Purpose",
+        diagnose: "Reading the present (diagnose)",
+        design: "Designing the next growth",
+        axes: "Sample notes on the six outcome axes",
+        prove: "Proof to collect in the next 4 weeks",
+        next: "One next step",
+        templateDuration: "Duration",
       },
       filters: {
         searchLabel: "Search",
@@ -293,14 +379,13 @@
       definition:
         "DreamFactory Growth Programs form one educational system for learning, language, thinking, expression, creativity, character, and future direction. The focus is not listing many classes, but accurately diagnosing each student, connecting the right training, and making growth visible through outputs and roadmaps.",
       priorities: [
-        "Program introduction pages for the website and app",
-        "A one-screen card catalog of growth programs",
+        "Copy diagnosis → recommended kit → parent report from the consult desk",
+        "Design classes with the FutureLab 6-week and 5-day camp templates",
+        "Observe and coach classes with the teacher quality checklist",
         "Operate the Cadet → Stellar Traveler → EduSpace Astronaut path",
         "Priority launch of the Overseas Local AX × English Startup Incubating Kit",
-        "A diagnostic and consultation flow before enrollment",
-        "Sample growth reports for parents",
-        "Priority launch of vacation camps and FutureLab signature programs",
-        "Internal teacher training and quality-control manuals",
+        "Link this app from the homepage and parent portal",
+        "Connect live enrollment and student records (next system)",
       ],
     },
   };
@@ -745,6 +830,13 @@
     query: "",
     onlyKit: false,
     activeProgramId: null,
+    consult: {
+      audience: "middle",
+      path: "진로 탐색형",
+      themes: [],
+      intent: "consult",
+      tab: "report",
+    },
   };
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -866,6 +958,230 @@
     const path = getEduspacePath();
     if (!path) return null;
     return (path.honorMarks || []).find((m) => m.id === id) || null;
+  }
+
+  function getOpsDesk() {
+    return DF.opsDesk || { themes: [], intents: [], templates: {}, homeLinks: [], reportObservations: {} };
+  }
+
+  function consultThemeById(id) {
+    return getOpsDesk().themes.find((theme) => theme.id === id) || null;
+  }
+
+  function consultIntentById(id) {
+    return getOpsDesk().intents.find((intent) => intent.id === id) || null;
+  }
+
+  function selectedConsultThemes() {
+    return state.consult.themes.map(consultThemeById).filter(Boolean);
+  }
+
+  function recommendConsult() {
+    const desk = getOpsDesk();
+    const consult = state.consult;
+    const intent = consultIntentById(consult.intent);
+    const themes = selectedConsultThemes();
+    const includeInternal = Boolean(intent?.includeInternal);
+
+    const scored = DF.programs
+      .map((program) => {
+        if (program.internal && !includeInternal) return { program, score: -99 };
+        let score = 0;
+        if (consult.audience !== "all" && program.audiences?.includes(consult.audience)) score += 3;
+        if (
+          consult.audience !== "all" &&
+          program.audiences?.length &&
+          !program.audiences.includes(consult.audience)
+        ) {
+          score -= 1;
+        }
+        if (consult.path !== "all" && program.pathTypes?.includes(consult.path)) score += 3;
+        themes.forEach((theme) => {
+          if (theme.programIds?.includes(program.id)) score += 5;
+        });
+        if (intent?.programIds?.includes(program.id)) score += 4;
+        if (program.priority) score += 1;
+        if (consult.intent === "camp" && program.id === "p10") score += 5;
+        return { program, score };
+      })
+      .filter((row) => row.score > 0)
+      .sort((a, b) => b.score - a.score);
+
+    let picks = scored.slice(0, 6).map((row) => row.program);
+    if (!picks.length) {
+      const audience = DF.audiences.find((item) => item.id === consult.audience);
+      const fallbackIds = audience?.programs || ["p2", "p3", "p6"];
+      picks = fallbackIds.map(programById).filter(Boolean).slice(0, 5);
+    }
+
+    let preset = null;
+    for (const theme of themes) {
+      const mappedId =
+        (theme.kitIdByAudience && theme.kitIdByAudience[consult.audience]) || theme.kitId || null;
+      if (mappedId) {
+        preset = presetById(mappedId);
+        if (preset) break;
+      }
+    }
+
+    if (!preset) {
+      const pickIds = new Set(picks.map((program) => program.id));
+      let bestOverlap = 1;
+      getPresetKits().forEach((candidate) => {
+        const overlap = (candidate.programIds || []).filter((id) => pickIds.has(id)).length;
+        if (overlap > bestOverlap) {
+          bestOverlap = overlap;
+          preset = candidate;
+        }
+      });
+    }
+
+    const isEn = state.lang === "en";
+    const audienceName =
+      consult.audience === "all" ? t().filters.allAudience : audienceLabel(consult.audience);
+    const pathName = consult.path === "all" ? t().filters.allPath : pathLabel(consult.path);
+    const themeNames = themes.map((theme) => (isEn ? theme.labelEn : theme.labelKo));
+    const intentName = intent ? (isEn ? intent.labelEn : intent.labelKo) : "";
+    const programNames = picks.map((program) => (isEn ? program.titleEn : program.titleKo));
+
+    const why = isEn
+      ? `For a ${audienceName} student on a ${pathName} path${
+          themeNames.length ? `, with interest in ${themeNames.join(", ")}` : ""
+        }${intentName ? ` (${intentName})` : ""}, start with ${programNames.slice(0, 3).join(", ") || "the core catalog"}.`
+      : `${audienceName} 대상, ${pathName} 경로${
+          themeNames.length ? `, 관심은 ${themeNames.join(" · ")}` : ""
+        }${intentName ? ` · 목적: ${intentName}` : ""}. 우선 ${
+          programNames.slice(0, 3).join(", ") || "핵심 프로그램"
+        }을 연결하세요.`;
+
+    return { picks, preset, why, audienceName, pathName, themeNames, intentName, intent };
+  }
+
+  function consultOutputs(picks) {
+    const isEn = state.lang === "en";
+    const items = [];
+    picks.slice(0, 4).forEach((program) => {
+      const content = programText(program);
+      const outcome = content.outcomes?.[0];
+      if (outcome) items.push(outcome);
+    });
+    if (!items.length) {
+      items.push(isEn ? "One visible artifact and a short reflection note" : "눈에 보이는 결과물 1개와 짧은 회고 노트");
+    }
+    return items.slice(0, 4);
+  }
+
+  function buildParentReport(rec) {
+    const isEn = state.lang === "en";
+    const labels = t().ops;
+    const desk = getOpsDesk();
+    const axes = DF.metrics.map((metric) => {
+      const sample = desk.reportObservations?.[metric.id];
+      const title = metricTitle(metric.id);
+      const body = isEn ? sample?.en || metric.bodyEn || metric.body : sample?.ko || metric.body;
+      return { title, body };
+    });
+    const home = desk.homeLinks || [];
+    const outputs = consultOutputs(rec.picks);
+    const programLines = rec.picks.map((program) => {
+      const title = isEn ? program.titleEn : program.titleKo;
+      return `${program.icon} ${title}`;
+    });
+    const presetTitle = rec.preset ? (isEn ? rec.preset.titleEn : rec.preset.titleKo) : "";
+
+    const lines = [
+      labels.reportTitle,
+      t().hero.tagline,
+      `${labels.studentLabel}: ${rec.audienceName}`,
+      `${labels.pathLabel}: ${rec.pathName}`,
+      `${labels.themeLabel}: ${rec.themeNames.join(", ") || t().labels.emptyDash}`,
+      `${labels.intentLabel}: ${rec.intentName || t().labels.emptyDash}`,
+      `${t().kit.created}: ${new Date().toLocaleString(isEn ? "en-US" : "ko-KR")}`,
+      "────────────────────────────────",
+      "",
+      `■ ${labels.diagnose}`,
+      rec.why,
+      "",
+      `■ ${labels.design}`,
+      ...(presetTitle ? [`· ${presetTitle}`] : []),
+      ...programLines.map((line) => `· ${line}`),
+      "",
+      `■ ${labels.axes}`,
+      ...axes.map((axis) => `· ${axis.title}: ${axis.body}`),
+    ];
+
+    home.forEach((block) => {
+      const title = isEn ? block.titleEn : block.titleKo;
+      const items = isEn ? block.itemsEn : block.itemsKo;
+      lines.push("", `■ ${title}`, ...items.map((item) => `· ${item}`));
+    });
+
+    lines.push("", `■ ${labels.prove}`, ...outputs.map((item) => `· ${item}`));
+    lines.push("", `■ ${labels.next}`, `· ${rec.why}`);
+    lines.push("", "────────────────────────────────", t().kit.growthModel, t().definition);
+    return lines.join("\n");
+  }
+
+  function buildConsultBrief(rec) {
+    const isEn = state.lang === "en";
+    const labels = t().ops;
+    const lines = [
+      t().kit.briefTitle,
+      labels.recommendTitle,
+      `${labels.studentLabel}: ${rec.audienceName}`,
+      `${labels.pathLabel}: ${rec.pathName}`,
+      `${labels.themeLabel}: ${rec.themeNames.join(", ") || t().labels.emptyDash}`,
+      `${labels.intentLabel}: ${rec.intentName || t().labels.emptyDash}`,
+      "",
+      rec.why,
+      "",
+    ];
+    if (rec.preset) {
+      lines.push(`■ ${labels.matchedKit}`, isEn ? rec.preset.titleEn : rec.preset.titleKo, "");
+    }
+    lines.push(`■ ${labels.programs}`);
+    rec.picks.forEach((program) => {
+      lines.push(`· ${isEn ? program.titleEn : program.titleKo}`);
+    });
+    lines.push("", "────────────────────────────────", t().kit.growthModel);
+    return lines.join("\n");
+  }
+
+  function buildTemplateBrief(template) {
+    if (!template) return t().kit.emptyBrief;
+    const isEn = state.lang === "en";
+    const title = isEn ? template.titleEn : template.titleKo;
+    const subtitle = isEn ? template.subtitleEn : template.subtitleKo;
+    const duration = isEn ? template.durationEn : template.durationKo;
+    const lines = [
+      title,
+      subtitle,
+      `${t().ops.templateDuration}: ${duration}`,
+      "────────────────────────────────",
+      "",
+    ];
+    (template.weeks || []).forEach((week) => {
+      const stepTitle = isEn ? week.titleEn : week.titleKo;
+      const body = isEn ? week.bodyEn : week.bodyKo;
+      lines.push(`${week.step}. ${stepTitle} — ${body}`);
+    });
+    lines.push("", t().kit.growthModel);
+    return lines.join("\n");
+  }
+
+  function loadConsultRecommendation() {
+    const rec = recommendConsult();
+    if (rec.preset) {
+      loadPresetKit(rec.preset.id, { replace: true });
+      return;
+    }
+    const ids = rec.picks.map((program) => program.id);
+    if (!ids.length) return;
+    state.kit = [...ids];
+    saveKit();
+    renderKit();
+    renderCards();
+    toast(t().toasts.presetReplaced);
   }
 
   function buildPresetBrief(preset) {
@@ -1109,6 +1425,7 @@
 
     setText("#navPrograms", t().nav.programs);
     setText("#navModel", t().nav.model);
+    setText("#navOps", t().nav.ops);
     setText("#navAudience", t().nav.audience);
     setText("#navEduspace", t().nav.eduspace);
     setText("#navKit", t().nav.kit);
@@ -1116,8 +1433,9 @@
     setText("#btnExportKit", t().buttons.exportKit);
     $("#btnExportKit").setAttribute("title", t().buttons.exportKitTitle);
     setText("#btnOpenKit", t().buttons.openKit);
-    setText(".hero-actions .primary", t().buttons.heroPrograms);
-    setText(".hero-actions .button:not(.primary)", t().buttons.heroKit);
+    setText("#heroProgramsBtn", t().buttons.heroPrograms);
+    setText("#heroConsultBtn", t().buttons.heroConsult);
+    setText("#heroKitBtn", t().buttons.heroKit);
 
     setText("#modelTitle", t().sections.modelTitle);
     setText("#modelSubtitle", t().sections.modelSubtitle);
@@ -1134,6 +1452,8 @@
     setText("#priorityTitle", t().sections.priorityTitle);
     setText("#eduspaceTitle", t().sections.eduspaceTitle);
     setText("#eduspaceSubtitle", t().sections.eduspaceSubtitle);
+    setText("#opsTitle", t().sections.opsTitle);
+    setText("#opsSubtitle", t().sections.opsSubtitle);
 
     $(".search-field .sr-only").textContent = t().filters.searchLabel;
     $("#searchInput").setAttribute("placeholder", t().filters.searchPlaceholder);
@@ -1462,6 +1782,156 @@
     `;
   }
 
+  function renderChoiceChips(items, selectedId, dataKey) {
+    return items
+      .map((item) => {
+        const active = item.id === selectedId ? " active" : "";
+        return `<button type="button" class="chip${active}" data-${dataKey}="${escapeHtml(item.id)}">${escapeHtml(item.label)}</button>`;
+      })
+      .join("");
+  }
+
+  function renderOpsDesk() {
+    const form = $("#opsForm");
+    const result = $("#opsResult");
+    if (!form || !result) return;
+
+    const desk = getOpsDesk();
+    const isEn = state.lang === "en";
+    const labels = t().ops;
+    const rec = recommendConsult();
+    const consult = state.consult;
+
+    const audienceChips = [
+      { id: "all", label: t().filters.allAudience },
+      ...DF.audiences.map((audience) => ({ id: audience.id, label: audienceLabel(audience.id) })),
+    ];
+    const pathChips = [
+      { id: "all", label: t().filters.allPath },
+      ...["약점 보완형", "강점 확장형", "진로 탐색형", "프로젝트 완성형"].map((path) => ({
+        id: path,
+        label: pathLabel(path),
+      })),
+    ];
+    const themeChips = desk.themes
+      .map((theme) => {
+        const active = consult.themes.includes(theme.id) ? " active" : "";
+        const label = `${theme.icon} ${isEn ? theme.labelEn : theme.labelKo}`;
+        return `<button type="button" class="chip${active}" data-consult-theme="${theme.id}">${escapeHtml(label)}</button>`;
+      })
+      .join("");
+    const intentChips = desk.intents
+      .map((intent) => {
+        const active = consult.intent === intent.id ? " active" : "";
+        const label = isEn ? intent.labelEn : intent.labelKo;
+        return `<button type="button" class="chip${active}" data-consult-intent="${intent.id}">${escapeHtml(label)}</button>`;
+      })
+      .join("");
+
+    form.innerHTML = `
+      <h3>${escapeHtml(labels.recommendTitle)}</h3>
+      <div class="ops-field">
+        <p class="ops-label">${escapeHtml(labels.audience)}</p>
+        <div class="chip-row">${renderChoiceChips(audienceChips, consult.audience, "consult-audience")}</div>
+      </div>
+      <div class="ops-field">
+        <p class="ops-label">${escapeHtml(labels.path)}</p>
+        <div class="chip-row">${renderChoiceChips(pathChips, consult.path, "consult-path")}</div>
+      </div>
+      <div class="ops-field">
+        <p class="ops-label">${escapeHtml(labels.themes)}</p>
+        <div class="chip-row">${themeChips}</div>
+      </div>
+      <div class="ops-field">
+        <p class="ops-label">${escapeHtml(labels.intent)}</p>
+        <div class="chip-row">${intentChips}</div>
+      </div>
+      <p class="ops-why">${escapeHtml(rec.why)}</p>
+      <div class="ops-actions">
+        <button type="button" class="primary" data-ops-load>${escapeHtml(labels.loadRecommend)}</button>
+        <button type="button" class="ghost" data-ops-copy-consult>${escapeHtml(labels.copyConsult)}</button>
+      </div>
+    `;
+
+    const programHtml = rec.picks.length
+      ? rec.picks
+          .map((program) => {
+            const title = isEn ? program.titleEn : program.titleKo;
+            return `
+              <li>
+                <button type="button" class="ops-program" data-ops-open="${program.id}">
+                  <span aria-hidden="true">${program.icon}</span>
+                  <strong>${escapeHtml(title)}</strong>
+                </button>
+              </li>`;
+          })
+          .join("")
+      : `<li class="ops-empty">${escapeHtml(labels.recommendEmpty)}</li>`;
+
+    const presetHtml = rec.preset
+      ? `<article class="ops-preset">
+          <p class="ops-label">${escapeHtml(labels.matchedKit)}</p>
+          <strong>${escapeHtml(isEn ? rec.preset.titleEn : rec.preset.titleKo)}</strong>
+          <p>${escapeHtml(isEn ? rec.preset.subtitleEn : rec.preset.subtitleKo)}</p>
+        </article>`
+      : "";
+
+    const tabs = [
+      ["report", labels.tabs.report],
+      ["futurelab", labels.tabs.futurelab],
+      ["camp", labels.tabs.camp],
+      ["teacher", labels.tabs.teacher],
+    ]
+      .map(([id, label]) => {
+        const active = consult.tab === id ? " active" : "";
+        return `<button type="button" class="chip${active}" data-ops-tab="${id}">${escapeHtml(label)}</button>`;
+      })
+      .join("");
+
+    let pane = "";
+    if (consult.tab === "report") {
+      const report = buildParentReport(rec);
+      pane = `
+        <article class="report-sheet">
+          <p class="ops-label">${escapeHtml(labels.reportTitle)}</p>
+          <p class="report-note">${escapeHtml(labels.reportNote)}</p>
+          <pre class="report-body">${escapeHtml(report)}</pre>
+          <button type="button" class="primary" data-ops-copy-report>${escapeHtml(labels.copyReport)}</button>
+        </article>`;
+    } else {
+      const template = desk.templates?.[consult.tab];
+      if (template) {
+        const title = isEn ? template.titleEn : template.titleKo;
+        const subtitle = isEn ? template.subtitleEn : template.subtitleKo;
+        const duration = isEn ? template.durationEn : template.durationKo;
+        const steps = (template.weeks || [])
+          .map((week) => {
+            const stepTitle = isEn ? week.titleEn : week.titleKo;
+            const body = isEn ? week.bodyEn : week.bodyKo;
+            return `<li><strong>${week.step}. ${escapeHtml(stepTitle)}</strong><span>${escapeHtml(body)}</span></li>`;
+          })
+          .join("");
+        pane = `
+          <article class="report-sheet">
+            <p class="ops-label">${escapeHtml(title)}</p>
+            <p class="report-note">${escapeHtml(subtitle)} · ${escapeHtml(duration)}</p>
+            <ol class="ops-template-list">${steps}</ol>
+            <button type="button" class="primary" data-ops-copy-template="${template.id}">${escapeHtml(labels.copyTemplate)}</button>
+          </article>`;
+      }
+    }
+
+    result.innerHTML = `
+      <div class="kit-panel ops-recommend">
+        ${presetHtml}
+        <p class="ops-label">${escapeHtml(labels.programs)}</p>
+        <ul class="ops-program-list">${programHtml}</ul>
+      </div>
+      <div class="ops-tabs" role="tablist">${tabs}</div>
+      ${pane}
+    `;
+  }
+
   /* ── Drawer ── */
 
   function openDrawer(id) {
@@ -1626,6 +2096,69 @@
     $("#presetKitList")?.addEventListener("click", onPresetClick);
     $("#eduspaceRoot")?.addEventListener("click", onPresetClick);
 
+    const onOpsClick = (e) => {
+      const audienceBtn = e.target.closest("[data-consult-audience]");
+      if (audienceBtn) {
+        state.consult.audience = audienceBtn.dataset.consultAudience;
+        renderOpsDesk();
+        return;
+      }
+      const pathBtn = e.target.closest("[data-consult-path]");
+      if (pathBtn) {
+        state.consult.path = pathBtn.dataset.consultPath;
+        renderOpsDesk();
+        return;
+      }
+      const themeBtn = e.target.closest("[data-consult-theme]");
+      if (themeBtn) {
+        const themeId = themeBtn.dataset.consultTheme;
+        if (state.consult.themes.includes(themeId)) {
+          state.consult.themes = state.consult.themes.filter((id) => id !== themeId);
+        } else {
+          state.consult.themes = [...state.consult.themes, themeId];
+        }
+        renderOpsDesk();
+        return;
+      }
+      const intentBtn = e.target.closest("[data-consult-intent]");
+      if (intentBtn) {
+        state.consult.intent = intentBtn.dataset.consultIntent;
+        renderOpsDesk();
+        return;
+      }
+      const tabBtn = e.target.closest("[data-ops-tab]");
+      if (tabBtn) {
+        state.consult.tab = tabBtn.dataset.opsTab;
+        renderOpsDesk();
+        return;
+      }
+      const openBtn = e.target.closest("[data-ops-open]");
+      if (openBtn) {
+        openDrawer(openBtn.dataset.opsOpen);
+        return;
+      }
+      if (e.target.closest("[data-ops-load]")) {
+        loadConsultRecommendation();
+        document.getElementById("kit")?.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+      if (e.target.closest("[data-ops-copy-consult]")) {
+        copyText(buildConsultBrief(recommendConsult()));
+        return;
+      }
+      if (e.target.closest("[data-ops-copy-report]")) {
+        copyText(buildParentReport(recommendConsult()));
+        return;
+      }
+      const templateBtn = e.target.closest("[data-ops-copy-template]");
+      if (templateBtn) {
+        const template = getOpsDesk().templates?.[templateBtn.dataset.opsCopyTemplate];
+        if (template) copyText(buildTemplateBrief(template));
+      }
+    };
+    $("#opsForm")?.addEventListener("click", onOpsClick);
+    $("#opsResult")?.addEventListener("click", onOpsClick);
+
     $("#drawerClose").addEventListener("click", closeDrawer);
     $("#drawerBackdrop").addEventListener("click", closeDrawer);
     $("#drawerCopy").addEventListener("click", () => {
@@ -1655,6 +2188,7 @@
     renderKit();
     renderPresetKits();
     renderEduspacePath();
+    renderOpsDesk();
     if (state.activeProgramId) openDrawer(state.activeProgramId);
   }
 

@@ -88,6 +88,11 @@ All fixed spacing follows a 4px base.
 - **States**: hidden/visible modal with backdrop, scrollable body.
 - **Accessibility**: modal role, localized close label, Escape closes.
 
+### Consult Desk
+- **Structure**: diagnosis chips (age, path, multi-select themes, purpose) + recommended programs/kit + tabbed parent report and operating templates.
+- **States**: live recommendation as chips change; copy actions for consult brief, parent report, and templates.
+- **Accessibility**: chips are buttons with visible focus; program rows open the existing drawer.
+
 ## 6. Motion & Interaction
 
 | Type | Duration | Easing | Usage |
