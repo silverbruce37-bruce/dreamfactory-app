@@ -40,9 +40,10 @@ function Visual({ kind }: { kind: string }) {
   if (kind === "nebula") {
     return (
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(60%_70%_at_70%_30%,rgba(139,108,255,0.45),transparent_62%),radial-gradient(50%_50%_at_30%_80%,rgba(255,122,61,0.22),transparent_60%),linear-gradient(160deg,#1a1328,#0b0912)]" />
-        <div className="absolute bottom-8 right-8 h-32 w-32 rounded-full border border-white/10 bg-white/5 blur-[1px]" />
-        <div className="absolute left-[18%] top-[22%] h-24 w-40 rounded-full bg-pink/20 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(70%_80%_at_78%_18%,rgba(168,130,255,0.55),transparent_58%),radial-gradient(50%_55%_at_20%_88%,rgba(255,122,61,0.28),transparent_58%),linear-gradient(160deg,#241833,#0c0a12)]" />
+        <div className="absolute -right-6 bottom-[-10%] h-56 w-56 rounded-full bg-pink/25 blur-3xl" />
+        <div className="absolute bottom-7 right-7 h-36 w-28 rounded-[22px] border border-white/15 bg-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.35)]" />
+        <div className="absolute bottom-16 right-16 h-36 w-28 rotate-6 rounded-[22px] border border-white/10 bg-gradient-to-br from-lavender/40 to-violet/20" />
       </div>
     );
   }
