@@ -36,7 +36,7 @@ export function Hero() {
 
         <h2
           aria-hidden
-          className="brand-wordmark font-display mx-auto w-[90vw] max-w-[90vw] overflow-hidden text-center text-[clamp(2.55rem,8.5vw,13rem)] font-medium leading-[0.82] tracking-[-0.045em]"
+          className="brand-wordmark font-display mx-auto w-[90vw] max-w-[90vw] overflow-hidden text-center text-[clamp(2.7rem,10.4vw,4.4rem)] font-medium leading-[0.82] tracking-[-0.045em] md:text-[clamp(6.4rem,13.2vw,13rem)]"
         >
           DREAMFRAME
         </h2>
