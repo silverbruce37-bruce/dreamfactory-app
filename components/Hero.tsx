@@ -2,25 +2,44 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="mx-auto grid max-w-[1080px] items-center gap-10 px-5 pb-16 pt-4 md:grid-cols-2 md:gap-16 md:px-8 md:pb-24 md:pt-10">
-      <div>
-        <h1 className="text-[40px] font-black leading-[1.32] tracking-[-0.045em] text-ink md:text-[56px]">
-          한 줄로
-          <br />
-          그림을 만듭니다.
-        </h1>
-        <Link
-          href="/create"
-          className="mt-8 flex h-14 w-full items-center justify-center rounded-2xl bg-ink text-[17px] font-bold tracking-[-0.02em] text-white hover:bg-black sm:inline-flex sm:w-auto sm:px-8"
-        >
-          만들기
-        </Link>
-      </div>
+    <section className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
+      <div className="hero-aurora absolute inset-0" />
+      <div className="hero-veil absolute inset-0" />
+      <div className="grain" />
 
-      <div className="relative h-[300px] overflow-hidden rounded-[28px] bg-lemon md:h-[440px]" aria-hidden="true">
-        <div className="absolute left-[12%] top-[16%] h-[42%] w-[40%] rounded-[20px] bg-white" />
-        <div className="absolute bottom-[14%] right-[12%] h-[34%] w-[32%] rounded-[20px] bg-ink" />
-        <div className="absolute right-[20%] top-[18%] h-3 w-3 rounded-full bg-ink" />
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[92vw] flex-col justify-between pb-[min(8vh,72px)] pt-28 md:pt-32">
+        <div className="max-w-xl pl-1 md:pl-2">
+          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
+            <span className="avail-dot h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            AI Image Generator
+          </p>
+
+          <h1 className="font-headline headline-gradient text-[clamp(2.4rem,5.6vw,5.1rem)] font-extrabold leading-[0.96] tracking-[-0.045em]">
+            Create images
+            <br />
+            that feel inevitable.
+          </h1>
+
+          <p className="mt-6 max-w-md text-[15px] leading-7 text-white/68 md:text-base">
+            DreamFrame turns a quiet line of intent into cinematic stills — editorial, product, and film-grade frames with a darkroom’s restraint.
+          </p>
+
+          <div className="mt-8">
+            <Link
+              href="/create"
+              className="cta-orb inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold text-white"
+            >
+              Start Creating
+            </Link>
+          </div>
+        </div>
+
+        <h2
+          aria-hidden
+          className="brand-wordmark font-display mx-auto w-[90vw] max-w-[90vw] overflow-hidden text-center text-[clamp(2.7rem,10.4vw,4.4rem)] font-medium leading-[0.82] tracking-[-0.045em] md:text-[clamp(6.4rem,13.2vw,13rem)]"
+        >
+          DREAMFRAME
+        </h2>
       </div>
     </section>
   );
