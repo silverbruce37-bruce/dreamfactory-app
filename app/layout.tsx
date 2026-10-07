@@ -1,35 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter, Syne } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
-const sans = Inter({
+const sans = Noto_Sans_KR({
   subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
   variable: "--font-sans",
-  display: "swap",
-});
-
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const headline = Syne({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-headline",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "DREAMFRAME — AI Image Generator",
-  description:
-    "Create cinematic stills with DreamFrame, an AI image generator for editorial, product, and film-grade frames.",
+  title: "드림팩토리",
+  description: "한 줄로 그림을 만듭니다.",
 };
 
 export const viewport = {
-  themeColor: "#07060c",
+  themeColor: "#F2F4F6",
 };
 
 export default function RootLayout({
@@ -38,8 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${sans.variable} ${display.variable} ${headline.variable} font-sans antialiased`}>
+    <html lang="ko">
+      <body className={`${sans.className} antialiased`}>
+        <a className="skip-link" href="#main">
+          본문으로 건너뛰기
+        </a>
         {children}
       </body>
     </html>

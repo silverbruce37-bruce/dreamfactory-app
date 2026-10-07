@@ -1,24 +1,20 @@
 import { Suspense } from "react";
-import { CreateHashRedirect } from "@/components/CreateHashRedirect";
 import { CreateStudio } from "@/components/CreateStudio";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata = {
-  title: "Studio — DREAMFRAME",
+  title: "만들기 · 드림팩토리",
 };
 
 export default function CreatePage() {
   return (
-    <>
-      <CreateHashRedirect />
+    <main id="main" className="min-h-screen">
       <Navbar />
-      <main className="min-h-screen bg-ink pt-28">
-        <Suspense fallback={<div className="mx-auto max-w-6xl px-4 py-20 text-white/50">Opening studio…</div>}>
-          <CreateStudio />
-        </Suspense>
-      </main>
+      <Suspense fallback={<div className="min-h-[70vh]" />}>
+        <CreateStudio />
+      </Suspense>
       <Footer />
-    </>
+    </main>
   );
 }
