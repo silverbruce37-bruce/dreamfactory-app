@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function ModelCreator() {
   return (
-    <section id="models" className="bg-mist px-4 py-20 text-ink md:px-6 md:py-28">
+    <section id="models" className="scroll-mt-28 bg-mist px-4 py-20 text-ink md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
           <div>

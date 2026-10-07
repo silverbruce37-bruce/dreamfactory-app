@@ -1,6 +1,7 @@
 const cards = [
   {
     id: "text-to-image",
+    href: "/create",
     title: "Text to image",
     copy: "A single sentence becomes a still with depth, grain, and light that holds.",
     className: "md:col-span-7 md:row-span-2 min-h-[340px] md:min-h-[460px]",
@@ -8,6 +9,7 @@ const cards = [
   },
   {
     id: "styles",
+    href: "/create#styles",
     title: "Style library",
     copy: "Editorial, product, nocturne, and film looks — kept tight, never noisy.",
     className: "md:col-span-5 min-h-[210px]",
@@ -15,6 +17,7 @@ const cards = [
   },
   {
     id: "variations",
+    href: "/create#variations",
     title: "Quiet variations",
     copy: "Explore nearby frames without losing the first idea.",
     className: "md:col-span-5 min-h-[210px]",
@@ -22,6 +25,7 @@ const cards = [
   },
   {
     id: "inpaint",
+    href: "/create#inpaint",
     title: "Inpaint",
     copy: "Rewrite only the part that needs another chance.",
     className: "md:col-span-4 min-h-[220px]",
@@ -29,6 +33,7 @@ const cards = [
   },
   {
     id: "upscale",
+    href: "/create#upscale",
     title: "Cinematic upscale",
     copy: "Hold detail at print scale. Soft edges stay soft.",
     className: "md:col-span-8 min-h-[220px]",
@@ -95,7 +100,7 @@ function Visual({ kind }: { kind: string }) {
 
 export function BentoGrid() {
   return (
-    <section id="features" className="relative bg-ink px-4 py-20 md:px-6 md:py-28">
+    <section id="features" className="relative scroll-mt-28 bg-ink px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.28em] text-lavender/70">The studio</p>
@@ -109,16 +114,17 @@ export function BentoGrid() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           {cards.map((card) => (
-            <article
+            <a
               key={card.id}
-              className={`bento-card relative overflow-hidden rounded-[28px] p-6 md:p-7 ${card.className}`}
+              href={card.href}
+              className={`bento-card relative block overflow-hidden rounded-[28px] p-6 transition-transform hover:-translate-y-0.5 md:p-7 ${card.className}`}
             >
               <Visual kind={card.visual} />
               <div className="relative z-10 max-w-sm">
                 <h3 className="font-headline text-xl font-semibold tracking-[-0.03em] text-white">{card.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/62">{card.copy}</p>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
