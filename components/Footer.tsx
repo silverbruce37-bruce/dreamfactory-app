@@ -14,12 +14,12 @@ export function Footer() {
           <Link href="/create" className="hover:text-white">
             Studio
           </Link>
-          <a href="/#features" className="hover:text-white">
+          <Link href="/#features" className="hover:text-white">
             Features
-          </a>
-          <a href="/#models" className="hover:text-white">
+          </Link>
+          <Link href="/#models" className="hover:text-white">
             3D
-          </a>
+          </Link>
           <Link href="/programs" className="hover:text-white">
             Programs catalog
           </Link>

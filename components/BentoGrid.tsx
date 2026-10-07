@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const cards = [
   {
     id: "text-to-image",
@@ -114,7 +116,7 @@ export function BentoGrid() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           {cards.map((card) => (
-            <a
+            <Link
               key={card.id}
               href={card.href}
               className={`bento-card relative block overflow-hidden rounded-[28px] p-6 transition-transform hover:-translate-y-0.5 md:p-7 ${card.className}`}
@@ -124,7 +126,7 @@ export function BentoGrid() {
                 <h3 className="font-headline text-xl font-semibold tracking-[-0.03em] text-white">{card.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/62">{card.copy}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

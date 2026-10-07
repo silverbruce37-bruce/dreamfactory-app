@@ -42,17 +42,11 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-8 text-[13px] text-white/70 md:flex" aria-label="Primary">
-            {links.map((link) =>
-              link.href.startsWith("/#") ? (
-                <a key={link.href} href={link.href} className="transition-colors hover:text-white">
-                  {link.label}
-                </a>
-              ) : (
-                <Link key={link.href} href={link.href} className="transition-colors hover:text-white">
-                  {link.label}
-                </Link>
-              ),
-            )}
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-white">
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2">
@@ -84,17 +78,11 @@ export function Navbar() {
             id="mobile-nav"
             className="mx-auto mt-2 flex max-w-6xl flex-col gap-5 rounded-[28px] border border-white/10 bg-[#100e18] px-6 py-6 text-base text-white md:hidden"
           >
-            {links.map((link) =>
-              link.href.startsWith("/#") ? (
-                <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="py-1">
-                  {link.label}
-                </a>
-              ) : (
-                <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="py-1">
-                  {link.label}
-                </Link>
-              ),
-            )}
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="py-1">
+                {link.label}
+              </Link>
+            ))}
             <Link
               href="/create"
               onClick={() => setOpen(false)}
